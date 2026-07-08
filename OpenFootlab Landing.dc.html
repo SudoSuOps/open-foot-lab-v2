@@ -60,7 +60,7 @@
         </div>
         <div style="display:flex; gap:26px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#8B8F86; letter-spacing:0.06em;">
           <span style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent, #A3D93B)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>SCANNED PER FOOT</span>
-          <span style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent, #A3D93B)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>TPU 95A</span>
+          <span style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent, #A3D93B)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>TUNED TPU</span>
           <span style="display:flex; align-items:center; gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--accent, #A3D93B)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>WASHABLE</span>
         </div>
       </div>
@@ -193,7 +193,7 @@
             <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:24px; letter-spacing:-0.01em; margin-bottom:8px;">Diabetic Offloading Insert</div>
             <p style="font-size:15px; line-height:1.55; color:#A8ACA2; margin:0 0 20px;">Custom lattice insert with a deep heel cup and strategic pressure-relief zones. The everyday device for at-risk feet.</p>
             <div style="display:flex; gap:10px; flex-wrap:wrap; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em;">
-              <span style="color:var(--accent, #A3D93B); border:1px solid rgba(163,217,59,0.4); border-radius:5px; padding:6px 10px;">TPU 95A</span>
+              <span style="color:var(--accent, #A3D93B); border:1px solid rgba(163,217,59,0.4); border-radius:5px; padding:6px 10px;">TPU 80A&ndash;95A</span>
               <span style="color:#70746B; background:#1B1E1A; border-radius:5px; padding:6px 10px;">DEEP HEEL CUP</span>
               <span style="color:#70746B; background:#1B1E1A; border-radius:5px; padding:6px 10px;">ARCH SUPPORT</span>
             </div>
@@ -227,7 +227,7 @@
             <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:24px; letter-spacing:-0.01em; margin-bottom:8px;">TPU Toe Filler + Insert</div>
             <p style="font-size:15px; line-height:1.55; color:#A8ACA2; margin:0 0 20px;">Restores toe-box volume after amputation so the shoe holds its shape. Printed separately or bonded as one part.</p>
             <div style="display:flex; gap:10px; flex-wrap:wrap; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em;">
-              <span style="color:var(--accent, #A3D93B); border:1px solid rgba(163,217,59,0.4); border-radius:5px; padding:6px 10px;">TPU 95A</span>
+              <span style="color:var(--accent, #A3D93B); border:1px solid rgba(163,217,59,0.4); border-radius:5px; padding:6px 10px;">TPU 80A&ndash;95A</span>
               <span style="color:#70746B; background:#1B1E1A; border-radius:5px; padding:6px 10px;">TOE FILLER</span>
               <span style="color:#70746B; background:#1B1E1A; border-radius:5px; padding:6px 10px;">INTEGRATED BOND</span>
             </div>
@@ -372,6 +372,7 @@
       </div>
       <div style="display:flex; align-items:center; gap:26px; flex-wrap:wrap;">
         <a href="mailto:build@openfootlab.com" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#A8ACA2;" style-hover="color:var(--accent, #A3D93B);">build@openfootlab.com</a>
+        <a href="tel:+15615327120" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#A8ACA2;" style-hover="color:var(--accent, #A3D93B);">561-532-7120</a>
         <a href="OpenFootlab%20Privacy.dc.html" style="font-size:13px; color:#A8ACA2;" style-hover="color:#F2F4EF;">Privacy</a>
         <a href="OpenFootlab%20Terms.dc.html" style="font-size:13px; color:#A8ACA2;" style-hover="color:#F2F4EF;">Terms</a>
       </div>
@@ -409,7 +410,7 @@ class Component extends DCLogic {
     const themeVars = `--accent:${accent};--accent-bright:${this.lighten(accent,0.35)};--radius:${radius};`;
     const data = [
       { q: 'How do you make my insert?', a: 'We take a scan of your foot, then a technician tunes the lattice density and relief zones to your pressure map. The insert is 3D-printed in durable TPU with a soft, skin-safe top cover, and finished by hand.' },
-      { q: 'What is TPU 95A?', a: 'A flexible, durable thermoplastic at 95A on the Shore hardness scale — firm enough to support and offload, soft enough to cushion. It is latex-free and odorless, and the only part that touches your skin is a certified soft top cover.' },
+      { q: 'What is TPU?', a: 'TPU (thermoplastic polyurethane) is a flexible, durable, latex-free, odorless material we 3D-print your insert from. We tune its firmness to your foot across the Shore-A range — roughly 80A to 95A — softer where you need cushion, firmer where you need support and offloading. The only layer that touches your skin is a certified soft top cover.' },
       { q: 'Will it fit in my existing shoes?', a: 'Yes. The insert is designed to sit inside standard and diabetic footwear, and can be trimmed to fit if needed. The toe filler restores toe-box volume so the shoe holds its shape.' },
       { q: 'How do I clean it?', a: 'Hand wash with mild soap and water, then air dry. No machine washing or heat — the TPU keeps its shape for everyday use.' },
       { q: 'Is this a medical device / do I need a referral?', a: 'OpenFootlab inserts are custom-fit accommodative devices designed to redistribute pressure across the foot — not medical devices. Talk with your care team; we work alongside your clinician and will guide you through the process.' }
