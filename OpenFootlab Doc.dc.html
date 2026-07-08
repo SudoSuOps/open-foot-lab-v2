@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Intel — OpenFootlab</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #08090A; }
+  * { box-sizing: border-box; }
+  ::selection { background: rgba(95,211,138,0.28); color: #F2F4EF; }
+  a { color: #5FD38A; text-decoration: none; }
+  a:hover { color: #8CE6AC; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  .doc-content { }
+  .doc-content h1 { font-family:'Archivo',sans-serif; font-weight:800; font-size:34px; letter-spacing:-0.02em; margin:0 0 10px; color:#F2F4EF; line-height:1.1; }
+  .doc-content h2 { font-family:'Archivo',sans-serif; font-weight:700; font-size:24px; letter-spacing:-0.01em; margin:44px 0 14px; color:#F2F4EF; padding-top:28px; border-top:1px solid rgba(255,255,255,0.08); }
+  .doc-content h3 { font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; margin:28px 0 10px; color:#F2F4EF; }
+  .doc-content p { font-size:16px; line-height:1.7; color:#C7CABF; margin:0 0 16px; }
+  .doc-content strong { color:#F2F4EF; font-weight:700; }
+  .doc-content em { color:#C7CABF; font-style:italic; }
+  .doc-content a { color:var(--accent,#5FD38A); }
+  .doc-content ul, .doc-content ol { margin:0 0 18px; padding-left:22px; }
+  .doc-content li { font-size:16px; line-height:1.6; color:#C7CABF; margin:0 0 8px; }
+  .doc-content blockquote { margin:0 0 20px; padding:6px 0 6px 20px; border-left:3px solid var(--accent,#5FD38A); color:#F2F4EF; font-size:17px; line-height:1.55; }
+  .doc-content code { font-family:'JetBrains Mono',monospace; font-size:13px; background:#1B1E1A; padding:2px 6px; border-radius:5px; color:#C7CABF; }
+  .doc-content hr { border:none; border-top:1px solid rgba(255,255,255,0.08); margin:34px 0; }
+  .doc-content table { width:100%; border-collapse:collapse; margin:0 0 22px; font-size:14px; }
+  .doc-content th { text-align:left; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent,#5FD38A); padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.16); }
+  .doc-content td { padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.06); color:#C7CABF; vertical-align:top; line-height:1.5; }
+  .doc-content h2 { scroll-margin-top:84px; }
+  .doc-wrap { display:grid; grid-template-columns:210px minmax(0,1fr); gap:48px; max-width:1000px; margin:0 auto; padding:48px 40px 96px; }
+  .doc-toc { position:sticky; top:84px; align-self:start; }
+  .doc-toc .toc-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:var(--accent,#5FD38A); text-transform:uppercase; margin-bottom:14px; }
+  .doc-toc a { display:block; font-size:13px; color:#8B8F86; padding:6px 0 6px 14px; border-left:1px solid rgba(255,255,255,0.1); line-height:1.45; }
+  .doc-toc a:hover { color:var(--accent,#5FD38A); border-left-color:var(--accent,#5FD38A); }
+  .doc-pn { display:flex; gap:16px; margin-top:52px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.08); }
+  @media (max-width:880px){ .doc-wrap{ grid-template-columns:1fr; gap:0; } .doc-toc{ display:none; } }
+</style>
+</helmet>
+<div class="ofl" style="position:relative; background:#08090A; color:#F2F4EF; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; min-height:100vh; {{ themeVars }}">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 40px; background:rgba(8,9,10,0.72); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,0.07);">
+    <a href="OpenFootlab%20Passport.dc.html" style="display:flex; align-items:center; gap:10px; color:#F2F4EF;">
+      <svg width="22" height="29" viewBox="0 0 48 64" fill="none"><path d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/><circle cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/></svg>
+      <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:17px; letter-spacing:-0.01em;">openfootlab</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:34px;">
+      <a href="https://www.openfootlab.com/study" target="_blank" rel="noopener" style="font-size:14px; color:#A8ACA2;" style-hover="color:#F2F4EF;">LocalStudy</a>
+      <a href="OpenFootlab%20Passport.dc.html" style="font-size:14px; color:#A8ACA2;" style-hover="color:#F2F4EF;">Foot Passport</a>
+      <a href="OpenFootlab%20Intel.dc.html" style="font-size:14px; color:var(--accent, #5FD38A);">Intel</a>
+      <a href="OpenFootlab%20Landing.dc.html" style="font-size:14px; color:#A8ACA2;" style-hover="color:#F2F4EF;">Inserts</a>
+      <a href="OpenFootlab%20Passport.dc.html#contact" style="font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:14px; background:var(--accent, #5FD38A); color:#0C0E0A; border-radius:9px; padding:11px 20px;" style-hover="background:#8CE6AC; color:#0C0E0A;">The Foot Passport</a>
+    </div>
+  </nav>
+
+  <!-- ============ DOC ============ -->
+  <div class="doc-wrap">
+    <aside class="doc-toc" ref="{{ tocRef }}"></aside>
+    <div style="min-width:0;">
+      <a href="OpenFootlab%20Intel.dc.html" style="display:inline-flex; align-items:center; gap:7px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#A8ACA2; letter-spacing:0.06em; margin-bottom:28px;" style-hover="color:var(--accent, #5FD38A);"><span style="font-family:'JetBrains Mono',monospace;">&larr;</span> INTEL</a>
+      <div style="display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:var(--accent, #5FD38A); text-transform:uppercase; border:1px solid rgba(95,211,138,0.3); border-radius:100px; padding:6px 12px; margin-bottom:28px;">
+        <span style="width:5px; height:5px; border-radius:50%; background:var(--accent, #5FD38A);"></span>Sourced
+      </div>
+      <div class="doc-content" ref="{{ contentRef }}">
+        <p style="color:#70746B;">Loading&hellip;</p>
+      </div>
+      <div class="doc-pn" ref="{{ pnRef }}"></div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="border-top:1px solid rgba(255,255,255,0.07); background:#0A0B0A;">
+    <div style="max-width:1180px; margin:0 auto; padding:40px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <svg width="20" height="27" viewBox="0 0 48 64" fill="none"><path d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/><circle cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/></svg>
+        <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:15px;">openfootlab</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; flex-wrap:wrap;">
+        <a href="mailto:build@openfootlab.com" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#A8ACA2;" style-hover="color:var(--accent, #5FD38A);">build@openfootlab.com</a>
+        <a href="OpenFootlab%20Privacy.dc.html" style="font-size:13px; color:#A8ACA2;" style-hover="color:#F2F4EF;">Privacy</a>
+        <a href="OpenFootlab%20Terms.dc.html" style="font-size:13px; color:#A8ACA2;" style-hover="color:#F2F4EF;">Terms</a>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#4A4D45; letter-spacing:0.06em; text-align:right;">THE FOOT-HEALTH INTELLIGENCE THAT FEEDS THE ECOSYSTEM<br>&copy; 2026 SWARM AND BEE LLC</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#5FD38A&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Brand&quot;, &quot;options&quot;: [&quot;#A3D93B&quot;, &quot;#5FD38A&quot;, &quot;#F5B82E&quot;, &quot;#8B5CF6&quot;]}, &quot;corners&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;rounded&quot;, &quot;options&quot;: [&quot;rounded&quot;, &quot;sharp&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Brand&quot;}}">
+class Component extends DCLogic {
+  contentRef = React.createRef();
+  tocRef = React.createRef();
+  pnRef = React.createRef();
+
+  buildToc(){
+    if (!this.contentRef.current || !this.tocRef.current) return;
+    const hs = this.contentRef.current.querySelectorAll('h2');
+    if (!hs.length) { this.tocRef.current.innerHTML = ''; return; }
+    let html = '<div class="toc-label">On this page</div>';
+    hs.forEach((h, idx) => { const id = 'sec' + idx; h.id = id; html += '<a href="#' + id + '">' + h.textContent + '</a>'; });
+    this.tocRef.current.innerHTML = html;
+  }
+
+  buildPrevNext(slug){
+    if (!this.pnRef.current) return;
+    const order = [
+      ['defendable-data','The defendable data'],
+      ['beyond-diabetes','Foot risk beyond diabetes'],
+      ['record-you-own','Beyond diabetes, and the record you own'],
+      ['medgemma','Getting the most out of MedGemma'],
+      ['intelligence-layer','OpenFootLab — the intelligence layer']
+    ];
+    const idx = order.findIndex(o => o[0] === slug);
+    const box = (href, label, title, align) => '<a href="' + href + '" style="flex:1; min-width:0; border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:18px 22px; color:#F2F4EF; text-align:' + align + ';"><div style="font-family:\'JetBrains Mono\',monospace; font-size:11px; letter-spacing:0.1em; color:#70746B; margin-bottom:7px;">' + label + '</div><div style="font-family:\'Archivo\',sans-serif; font-weight:700; font-size:16px; line-height:1.25;">' + title + '</div></a>';
+    let html = '';
+    html += idx > 0 ? box('OpenFootlab%20Doc.dc.html?doc=' + order[idx-1][0], '\u2190 PREVIOUS', order[idx-1][1], 'left') : '<span style="flex:1;"></span>';
+    html += (idx >= 0 && idx < order.length - 1) ? box('OpenFootlab%20Doc.dc.html?doc=' + order[idx+1][0], 'NEXT \u2192', order[idx+1][1], 'right') : '<span style="flex:1;"></span>';
+    this.pnRef.current.innerHTML = html;
+  }
+
+  lighten(hex, amt) {
+    try {
+      let h = hex.replace('#',''); if (h.length === 3) h = h.split('').map(c => c+c).join('');
+      const num = parseInt(h, 16); let r=(num>>16)&255, g=(num>>8)&255, b=num&255;
+      r=Math.min(255,Math.round(r+(255-r)*amt)); g=Math.min(255,Math.round(g+(255-g)*amt)); b=Math.min(255,Math.round(b+(255-b)*amt));
+      return '#'+[r,g,b].map(v=>v.toString(16).padStart(2,'0')).join('');
+    } catch(e){ return hex; }
+  }
+
+  esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  inline(s){
+    s = this.esc(s);
+    s = s.replace(/`([^`]+)`/g,'<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+    s = s.replace(/\*([^*]+)\*/g,'<em>$1</em>');
+    s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+    s = s.replace(/(^|[^A-Za-z0-9_])_([^_]+)_(?![A-Za-z0-9])/g,'$1<em>$2</em>');
+    return s;
+  }
+
+  splitRow(ln){ return ln.trim().replace(/^\|/,'').replace(/\|$/,'').split('|').map(c=>c.trim()); }
+
+  md2html(md){
+    const lines = md.replace(/\r/g,'').split('\n');
+    const out = []; let i = 0;
+    while (i < lines.length) {
+      const ln = lines[i];
+      if (/^\s*$/.test(ln)) { i++; continue; }
+      if (/^---+\s*$/.test(ln)) { out.push('<hr>'); i++; continue; }
+      const h = /^(#{1,4})\s+(.*)$/.exec(ln);
+      if (h) { const l = h[1].length; out.push('<h'+l+'>'+this.inline(h[2])+'</h'+l+'>'); i++; continue; }
+      if (/^\s*\|/.test(ln) && i+1 < lines.length && /-/.test(lines[i+1]) && /^\s*\|?[\s:|-]+$/.test(lines[i+1])) {
+        const header = this.splitRow(ln); i += 2; const rows = [];
+        while (i < lines.length && /^\s*\|/.test(lines[i])) { rows.push(this.splitRow(lines[i])); i++; }
+        let t = '<table><thead><tr>' + header.map(c=>'<th>'+this.inline(c)+'</th>').join('') + '</tr></thead><tbody>';
+        t += rows.map(r=>'<tr>'+r.map(c=>'<td>'+this.inline(c)+'</td>').join('')+'</tr>').join('');
+        t += '</tbody></table>'; out.push(t); continue;
+      }
+      if (/^\s*>/.test(ln)) {
+        const buf = [];
+        while (i < lines.length && /^\s*>/.test(lines[i])) { buf.push(lines[i].replace(/^\s*>\s?/,'')); i++; }
+        out.push('<blockquote>'+this.inline(buf.join(' '))+'</blockquote>'); continue;
+      }
+      if (/^\s*[-*]\s+/.test(ln)) {
+        const buf = [];
+        while (i < lines.length && /^\s*[-*]\s+/.test(lines[i])) { buf.push(lines[i].replace(/^\s*[-*]\s+/,'')); i++; }
+        out.push('<ul>'+buf.map(b=>'<li>'+this.inline(b)+'</li>').join('')+'</ul>'); continue;
+      }
+      if (/^\s*\d+\.\s+/.test(ln)) {
+        const buf = [];
+        while (i < lines.length && /^\s*\d+\.\s+/.test(lines[i])) { buf.push(lines[i].replace(/^\s*\d+\.\s+/,'')); i++; }
+        out.push('<ol>'+buf.map(b=>'<li>'+this.inline(b)+'</li>').join('')+'</ol>'); continue;
+      }
+      const buf = [];
+      while (i < lines.length && !/^\s*$/.test(lines[i]) && !/^(#{1,4}\s|\s*>|\s*[-*]\s|\s*\d+\.\s|\s*\|)/.test(lines[i]) && !/^---+\s*$/.test(lines[i])) { buf.push(lines[i]); i++; }
+      out.push('<p>'+this.inline(buf.join(' '))+'</p>');
+    }
+    return out.join('\n');
+  }
+
+  componentDidMount(){
+    const map = {
+      'defendable-data': { file:'The-Defendable-Data.md', title:'The defendable data' },
+      'beyond-diabetes': { file:'Foot-Risk-Beyond-Diabetes.md', title:'Foot risk beyond diabetes' },
+      'record-you-own': { file:'Beyond-Diabetes-and-the-Record-You-Own.md', title:'Beyond diabetes, and the record you own' },
+      'medgemma': { file:'Getting-the-Most-from-MedGemma.md', title:'Getting the most out of MedGemma' },
+      'intelligence-layer': { file:'OpenFootLab-The-Intelligence-Layer.md', title:'OpenFootLab — the intelligence layer' }
+    };
+    let slug = 'defendable-data';
+    try { slug = new URLSearchParams(window.location.search).get('doc') || slug; } catch(e){}
+    const entry = map[slug] || map['defendable-data'];
+    try { document.title = entry.title + ' — OpenFootlab Intel'; } catch(e){}
+    this.buildPrevNext(slug);
+    fetch('docs/' + entry.file)
+      .then(r => { if (!r.ok) throw new Error('nf'); return r.text(); })
+      .then(t => { if (this.contentRef.current) { this.contentRef.current.innerHTML = this.md2html(t); this.buildToc(); } })
+      .catch(() => {
+        if (this.contentRef.current) this.contentRef.current.innerHTML =
+          '<h1>' + entry.title + '</h1><p>This document can\u2019t be loaded in this view. <a href="https://www.openfootlab.com/docs/' + entry.file + '" target="_blank" rel="noopener">Read it on openfootlab.com &rarr;</a></p>';
+      });
+  }
+
+  renderVals(){
+    const accent = this.props.accent ?? '#5FD38A';
+    const radius = (this.props.corners ?? 'rounded') === 'sharp' ? '3px' : '14px';
+    const themeVars = `--accent:${accent};--accent-bright:${this.lighten(accent,0.35)};--radius:${radius};`;
+    return { themeVars, contentRef: this.contentRef, tocRef: this.tocRef, pnRef: this.pnRef };
+  }
+}
+</script>
+</body>
+</html>
