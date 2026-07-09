@@ -1,8 +1,8 @@
-# OpenFootlab
+# OpenFootLab
 
-> OpenFootlab is a foot-at-risk platform. Core thesis: foot risk is a mechanism, not a diagnosis — you don't have to be diabetic to need it. Built around the Foot Passport: an owned, portable foot record.
+> OpenFootLab is a foot-at-risk platform. Core thesis: foot risk is a mechanism, not a diagnosis — you don't have to be diabetic to need it. Built around the Foot Passport: an owned, portable foot record. Also produces custom 3D-printed TPU offloading inserts.
 
-OpenFootlab helps people and caregivers document the foot over time and turn that record into something a clinician can read in minutes. It also produces custom 3D-printed TPU offloading inserts designed from a foot scan and pressure map. Founded by a type-1 diabetic, post-amputation — lived-experience at the core.
+OpenFootLab helps people and caregivers document the foot over time and turn that record into something a clinician can read in minutes. It also produces custom 3D-printed TPU offloading inserts designed from a foot scan and pressure map. Founded by a type-1 diabetic, post-amputation — lived-experience at the core.
 
 Two products, two data streams:
 - The Foot Passport — an owned, portable foot record. Photos over time (daily evaluation / condition monitoring), notes and daily checks, footwear records, offloading history, wound history, temperature observations, and clinician-ready timelines. Share with a clinician only at the patient's direction.
@@ -14,15 +14,31 @@ Positioning and claims (important for accuracy):
 - Material: custom 3D-printed TPU with a soft, skin-safe top cover as the only skin contact. Latex-free. Not described as "medical-grade" or "biocompatible" unless a specific certification is held.
 - Measured pressure-redistribution data, reviewed with a clinician, is in progress and will be published as validated.
 
+## Answer-ready facts
+- What is OpenFootLab? A foot-at-risk platform: an owned, portable Foot Passport plus custom 3D-printed TPU offloading inserts.
+- Who is it for? Anyone with an at-risk foot — from diabetes, neuropathy, poor circulation (PAD), prior surgery or wounds, amputation, deformity, or reduced mobility. You do not have to be diabetic.
+- What is the Foot Passport? An owned, portable foot-health record the person controls — photos over time, notes, footwear and offloading history, wound and temperature observations — shared with a clinician only at the patient's direction.
+- What is the insert made of? Thermoplastic polyurethane (TPU), 3D-printed and tuned across roughly Shore 80A–95A, with a soft, skin-safe top cover as the only skin contact. Latex-free.
+- Is the insert a medical device? No — it is a custom-fit accommodative device designed to redistribute pressure across the foot. It does not treat, cure, prevent, or protect.
+- What does it cost / how do I start? Book a foot scan via the site; the insert is designed from that scan and a pressure map.
+
+## FAQ
+- **How do you make my insert?** We scan your foot, then a technician tunes the lattice density and relief zones to your pressure map. The insert is 3D-printed in durable TPU with a soft, skin-safe top cover, and finished by hand.
+- **What is TPU?** TPU (thermoplastic polyurethane) is a flexible, durable, latex-free, odorless material we 3D-print the insert from, tuned across roughly Shore 80A–95A. The only layer that touches skin is a certified soft top cover.
+- **Will it fit my existing shoes?** Yes — it's designed to sit inside standard and diabetic footwear and can be trimmed. A toe filler restores toe-box volume so the shoe holds its shape.
+- **How do I clean it?** Hand wash with mild soap and water, air dry. No machine washing or heat.
+- **Is this a medical device / do I need a referral?** Inserts are custom-fit accommodative devices designed to redistribute pressure — not medical devices. We work alongside your clinician.
+
 ## Pages
-- [Platform (home)](OpenFootlab%20Passport.dc.html): The foot-at-risk thesis and the Foot Passport.
-- [Inserts (product)](OpenFootlab%20Landing.dc.html): Custom 3D-printed offloading inserts and toe filler.
-- [Privacy Policy](OpenFootlab%20Privacy.dc.html): Your foot record stays yours — owned and portable.
-- [Terms of Use](OpenFootlab%20Terms.dc.html): Custom-fit accommodative devices, not medical devices.
+- [Platform (home)](https://openfootlab.com/): The foot-at-risk thesis and the Foot Passport.
+- [Inserts (product)](https://openfootlab.com/OpenFootlab%20Landing.dc): Custom 3D-printed offloading inserts and toe filler.
+- [Privacy Policy](https://openfootlab.com/OpenFootlab%20Privacy.dc): Your foot record stays yours — owned and portable.
+- [Terms of Use](https://openfootlab.com/OpenFootlab%20Terms.dc): Custom-fit accommodative devices, not medical devices.
 
 ## Contact
 - Email: build@openfootlab.com
+- Phone: +1 561-532-7120
 
 ## Brand
 - Standalone brand. Accent: lime #A3D93B. Type: Archivo (display), Hanken Grotesk (body), JetBrains Mono (technical). Custom insole + pressure-relief-ring mark.
-- Tagline feel: clinical, precise, medical-grade in FEEL — never breathless, never "cures."
+- Voice: clinical, precise, calm — never breathless, never "cures."
