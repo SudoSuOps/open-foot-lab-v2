@@ -31,9 +31,9 @@ Positioning and claims (important for accuracy):
 
 ## Pages
 - [Platform (home)](https://openfootlab.com/): The foot-at-risk thesis and the Foot Passport.
-- [Inserts (product)](https://openfootlab.com/OpenFootlab%20Landing.dc): Custom 3D-printed offloading inserts and toe filler.
-- [Privacy Policy](https://openfootlab.com/OpenFootlab%20Privacy.dc): Your foot record stays yours — owned and portable.
-- [Terms of Use](https://openfootlab.com/OpenFootlab%20Terms.dc): Custom-fit accommodative devices, not medical devices.
+- [Inserts (product)](https://openfootlab.com/inserts): Custom 3D-printed offloading inserts and toe filler.
+- [Privacy Policy](https://openfootlab.com/privacy): Your foot record stays yours — owned and portable.
+- [Terms of Use](https://openfootlab.com/terms): Custom-fit accommodative devices, not medical devices.
 
 ## Contact
 - Email: build@openfootlab.com

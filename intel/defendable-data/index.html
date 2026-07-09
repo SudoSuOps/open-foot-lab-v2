@@ -1,0 +1,208 @@
+<!DOCTYPE html><html><head><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The defendable data — the clinical core of OpenFootLab — OpenFootlab Intel</title>
+<meta name="description" content="openfootlab
+    
+    
+      LocalStudy
+      Foot Passport
+      Intel
+      Inserts
+      The Foot Passport
+    
+  
+
+  
+  
+    On this page1. The burden j">
+<link rel="canonical" href="https://openfootlab.com/intel/defendable-data">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Documents — OpenFootlab">
+<meta property="og:description" content="OpenFootlab documents and field notes.">
+<meta property="og:url" content="https://openfootlab.com/OpenFootlab%20Doc.dc">
+<style>x-dc{display:none!important}</style><script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="1"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" data-dc-tpl="2"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" data-dc-tpl="3"><style data-dc-tpl="4">
+  html, body { margin: 0; padding: 0; background: #08090A; }
+  * { box-sizing: border-box; }
+  ::selection { background: rgba(95,211,138,0.28); color: #F2F4EF; }
+  a { color: #5FD38A; text-decoration: none; }
+  a:hover { color: #8CE6AC; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  .doc-content { }
+  .doc-content h1 { font-family:'Archivo',sans-serif; font-weight:800; font-size:34px; letter-spacing:-0.02em; margin:0 0 10px; color:#F2F4EF; line-height:1.1; }
+  .doc-content h2 { font-family:'Archivo',sans-serif; font-weight:700; font-size:24px; letter-spacing:-0.01em; margin:44px 0 14px; color:#F2F4EF; padding-top:28px; border-top:1px solid rgba(255,255,255,0.08); }
+  .doc-content h3 { font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; margin:28px 0 10px; color:#F2F4EF; }
+  .doc-content p { font-size:16px; line-height:1.7; color:#C7CABF; margin:0 0 16px; }
+  .doc-content strong { color:#F2F4EF; font-weight:700; }
+  .doc-content em { color:#C7CABF; font-style:italic; }
+  .doc-content a { color:var(--accent,#5FD38A); }
+  .doc-content ul, .doc-content ol { margin:0 0 18px; padding-left:22px; }
+  .doc-content li { font-size:16px; line-height:1.6; color:#C7CABF; margin:0 0 8px; }
+  .doc-content blockquote { margin:0 0 20px; padding:6px 0 6px 20px; border-left:3px solid var(--accent,#5FD38A); color:#F2F4EF; font-size:17px; line-height:1.55; }
+  .doc-content code { font-family:'JetBrains Mono',monospace; font-size:13px; background:#1B1E1A; padding:2px 6px; border-radius:5px; color:#C7CABF; }
+  .doc-content hr { border:none; border-top:1px solid rgba(255,255,255,0.08); margin:34px 0; }
+  .doc-content table { width:100%; border-collapse:collapse; margin:0 0 22px; font-size:14px; }
+  .doc-content th { text-align:left; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent,#5FD38A); padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.16); }
+  .doc-content td { padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.06); color:#C7CABF; vertical-align:top; line-height:1.5; }
+  .doc-content h2 { scroll-margin-top:84px; }
+  .doc-wrap { display:grid; grid-template-columns:210px minmax(0,1fr); gap:48px; max-width:1000px; margin:0 auto; padding:48px 40px 96px; }
+  .doc-toc { position:sticky; top:84px; align-self:start; }
+  .doc-toc .toc-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:var(--accent,#5FD38A); text-transform:uppercase; margin-bottom:14px; }
+  .doc-toc a { display:block; font-size:13px; color:#8B8F86; padding:6px 0 6px 14px; border-left:1px solid rgba(255,255,255,0.1); line-height:1.45; }
+  .doc-toc a:hover { color:var(--accent,#5FD38A); border-left-color:var(--accent,#5FD38A); }
+  .doc-pn { display:flex; gap:16px; margin-top:52px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.08); }
+  @media (max-width:880px){ .doc-wrap{ grid-template-columns:1fr; gap:0; } .doc-toc{ display:none; } }
+</style><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The defendable data — the clinical core of OpenFootLab",
+  "url": "https://openfootlab.com/intel/defendable-data",
+  "publisher": {
+    "@type": "Organization",
+    "name": "OpenFootLab",
+    "url": "https://openfootlab.com/"
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "name": "OpenFootLab Intel",
+    "url": "https://openfootlab.com/intel"
+  }
+}
+</script>
+</head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="OpenFootlab Doc"><div data-dc-tpl="5" class="ofl" style="position: relative; background: rgb(8, 9, 10); color: rgb(242, 244, 239); font-family: &quot;Hanken Grotesk&quot;, system-ui, sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh; --accent: #5FD38A; --accent-bright: #97e2b3; --radius: 14px;">
+
+  
+  <nav data-dc-tpl="6" style="position: sticky; top: 0px; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: rgba(8, 9, 10, 0.72); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+    <a data-dc-tpl="7" href="/" style="display: flex; align-items: center; gap: 10px; color: rgb(242, 244, 239);">
+      <svg data-dc-tpl="8" width="22" height="29" viewBox="0 0 48 64" fill="none"><path data-dc-tpl="9" d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></path><circle data-dc-tpl="10" cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></circle></svg>
+      <span data-dc-tpl="11" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -0.01em;">openfootlab</span>
+    </a>
+    <div data-dc-tpl="12" style="display: flex; align-items: center; gap: 34px;">
+      <a data-dc-tpl="13" href="https://www.openfootlab.com/study" target="_blank" rel="noopener" class="scp0" style="font-size: 14px; color: rgb(168, 172, 162);">LocalStudy</a>
+      <a data-dc-tpl="14" href="/" class="scp0" style="font-size: 14px; color: rgb(168, 172, 162);">Foot Passport</a>
+      <a data-dc-tpl="15" href="/intel" style="font-size: 14px; color: var(--accent, #5FD38A);">Intel</a>
+      <a data-dc-tpl="16" href="/inserts" class="scp0" style="font-size: 14px; color: rgb(168, 172, 162);">Inserts</a>
+      <a data-dc-tpl="17" href="/#contact" class="scp1" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; font-weight: 600; font-size: 14px; background: var(--accent, #5FD38A); color: rgb(12, 14, 10); border-radius: 9px; padding: 11px 20px;">The Foot Passport</a>
+    </div>
+  </nav>
+
+  
+  <div data-dc-tpl="18" class="doc-wrap">
+    <aside data-dc-tpl="19" class="doc-toc"><div class="toc-label">On this page</div><a href="#sec0">1. The burden justifies the platform</a><a href="#sec1">2. Recurrence is the business case for the record</a><a href="#sec2">3. The secret sauce — compare to this person's own baseline</a><a href="#sec3">4. What the record must preserve</a><a href="#sec4">5. Why storage is not the business, and the model is not the business</a><a href="#sec5">6. Strategic conclusion</a><a href="#sec6">Sources</a></aside>
+    <div data-dc-tpl="20" style="min-width: 0px;">
+      <a data-dc-tpl="21" href="/intel" class="scp2" style="display: inline-flex; align-items: center; gap: 7px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(168, 172, 162); letter-spacing: 0.06em; margin-bottom: 28px;"><span data-dc-tpl="22" style="font-family: &quot;JetBrains Mono&quot;, monospace;">←</span> INTEL</a>
+      <div data-dc-tpl="23" style="display: inline-flex; align-items: center; gap: 8px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; letter-spacing: 0.12em; color: var(--accent, #5FD38A); text-transform: uppercase; border: 1px solid rgba(95, 211, 138, 0.3); border-radius: 100px; padding: 6px 12px; margin-bottom: 28px;">
+        <span data-dc-tpl="24" style="width: 5px; height: 5px; border-radius: 50%; background: var(--accent, #5FD38A);"></span>Sourced
+      </div>
+      <div data-dc-tpl="25" class="doc-content"><h1>The defendable data — the clinical core of OpenFootLab</h1>
+<p><em>Defendable data is the core structure of the platform. Every number here traces to primary literature and is re-checkable. The data justifies the platform — and, more importantly, it proves why the <strong>owned longitudinal record</strong> is the moat.</em></p>
+<h2 id="sec0">1. The burden justifies the platform</h2>
+<p>Diabetic foot ulcers (DFUs) — the strongest initial proof base:</p>
+<table><thead><tr><th>Fact</th><th>Figure</th><th>Source</th></tr></thead><tbody><tr><td>People with a DFU each year</td><td><strong>~18.6M</strong> global · <strong>~1.6M</strong> US</td><td>JAMA 2023 (Armstrong, Tan, Boulton et al.)</td></tr><tr><td>Lifetime risk of a DFU (person with diabetes)</td><td><strong>19–34%</strong></td><td>JAMA 2023; NEJM 2017</td></tr><tr><td>Share of diabetes-related lower-limb amputations preceded by a DFU</td><td><strong>~80%</strong></td><td>JAMA 2023</td></tr><tr><td>DFUs ending in lower-extremity amputation</td><td>up to <strong>20%</strong></td><td>JAMA 2023</td></tr><tr><td>Become infected</td><td>~50% <em>(per the review)</em></td><td>JAMA 2023</td></tr><tr><td>5-year mortality after a DFU</td><td><strong>~30%</strong></td><td>JAMA 2023 + multiple</td></tr><tr><td>5-year mortality after <strong>major amputation</strong></td><td><strong>&gt;70%</strong></td><td>JAMA 2023 + multiple</td></tr><tr><td>US direct treatment cost</td><td><strong>$9–13B / year</strong></td><td>JAMA 2023 + multiple</td></tr></tbody></table>
+<blockquote>A diabetic foot ulcer carries a 5-year mortality worse than many common cancers, and a major amputation worse than most. This is not a cosmetic problem. It is a survival problem.</blockquote>
+<p>The burden is <strong>rising</strong> — people live longer with more medical complexity, so lifetime risk climbs. A larger, older, more-complex diabetic population means more feet at risk for longer.</p>
+<h2 id="sec1">2. Recurrence is the business case for the record</h2>
+<p>The single most important number for the product:</p>
+<table><thead><tr><th>After a DFU heals, share who recur</th><th></th><th>Source</th></tr></thead><tbody><tr><td>within <strong>1 year</strong></td><td><strong>~40%</strong></td><td>2024 systematic review + meta-analysis</td></tr><tr><td>within <strong>3 years</strong></td><td><strong>~60%</strong></td><td>〃 (corroborated, prospective cohort)</td></tr><tr><td>within <strong>5 years</strong></td><td><strong>~65%</strong></td><td>〃; Feb 2025 meta-analysis (42% @1y, 65% @5y); NEJM 2017</td></tr></tbody></table>
+<p><strong>A healed wound is not the end of the story — it is the beginning of a higher-risk timeline.</strong> Two-thirds recur within five years. The clinically-correct model of a foot is not "healthy vs ulcer" — it is <strong>remission</strong>, a state that must be <em>watched</em>, indefinitely, because it reverts.</p>
+<p>A one-time photo check cannot hold remission. A <strong>longitudinal record can.</strong> That is the product.</p>
+<h2 id="sec2">3. The secret sauce — compare to <em>this</em> person's own baseline</h2>
+<p>A generic model answers a weak question: <em>"does this photo look bad?"</em> The longitudinal record answers the strong one:</p>
+<blockquote><strong>"What changed — compared with this same person, same foot, same wound site, same surgery, same shoe history, same risk profile?"</strong></blockquote>
+<p>Foot risk is <strong>temporal</strong>. The signal is not the image; the signal is the <strong>delta</strong>. Change detection against a personal baseline is where the owned record beats any generic classifier — and it <em>compounds</em>: the record is worth more every week because there is more history to compare against. That is defensible in a way a model checkpoint never is.</p>
+<h2 id="sec3">4. What the record must preserve</h2>
+<p>The Foot Passport is the <strong>owned longitudinal foot record</strong> — not "upload a photo and let AI check it," but <em>"build and own a portable record of your foot health over time."</em> It preserves:</p>
+<ul><li><strong>Visual timeline</strong> — L/R photos, angles, timestamps; wound &amp; healing progression; skin</li></ul>
+<p>  changes, swelling, redness, callus, pressure marks, nail changes, surgical sites.</p>
+<ul><li><strong>Risk history</strong> — prior ulcer, prior amputation, PAD, neuropathy, surgery, deformity,</li></ul>
+<p>  offloading history, wound history, vascular workup, infection history.</p>
+<ul><li><strong>Footwear / offloading record</strong> — shoes, inserts, braces, custom orthotics, walkers, post-op</li></ul>
+<p>  shoes, pressure-relief devices, fit changes, wear patterns, clinician recommendations.</p>
+<ul><li><strong>Signals &amp; observations</strong> — temperature differences, pain, numbness, drainage, odor, redness,</li></ul>
+<p>  swelling, pressure, walking tolerance, caregiver notes.</p>
+<ul><li><strong>Care continuity</strong> — who saw the foot, when, what changed, what was recommended, what device</li></ul>
+<p>  was prescribed, what wound care was used, what improved, <strong>what came back.</strong></p>
+<h2 id="sec4">5. Why storage is not the business, and the model is not the business</h2>
+<ul><li><strong>Storage is commodity.</strong> A NAS, phone, cloud bucket, health-store, or clinic EHR can all hold</li></ul>
+<p>  files. The moat is the <strong>schema · habit · continuity · portability · interpretability ·   receipts</strong> — not the disk. So OpenFootLab is <em>not</em> "secure storage"; it is a <strong>foot-risk record   system that helps people, caregivers, and care teams see change earlier and communicate better.</strong></p>
+<ul><li><strong>The model is one lane.</strong> MedGemma, a GPT model, a Claude workflow, a local vision model, a</li></ul>
+<p>  podiatry classifier, a future FDA-cleared model — all swappable inside the system. Models get   cheaper and better and get replaced. The <strong>record remains.</strong> (See <code>Getting-the-Most-from-MedGemma.md</code>   — the model's job is to read the delta against the baseline, not to be the whole system.)</p>
+<blockquote>The model can change. The storage vendor can change. The phone can change. <strong>The record remains.</strong></blockquote>
+<h2 id="sec5">6. Strategic conclusion</h2>
+<p>The bigger, more defendable company is <strong>a longitudinal foot-risk platform with an owned portable record at the center</strong> — not a "diabetes app" (that box is too small).</p>
+<ul><li><strong>Diabetes</strong> gives the strongest initial proof base (the data above).</li><li><strong>The founder's story</strong> gives it authenticity (lives the at-risk foot).</li><li><strong>The data</strong> gives it clinical gravity.</li><li>But the <strong>category is bigger than diabetes</strong> (see <code>Foot-Risk-Beyond-Diabetes.md</code>).</li></ul>
+<p>*<em>The moat is not the NAS. Not the model. Not even the app. The moat is the trusted foot timeline — owned by the person, structured enough for care, portable enough for life, and useful </em>before<em> the crisis.</em>*</p>
+<hr>
+<h2 id="sec6">Sources</h2>
+<ul><li>Armstrong DG, Tan T-W, Boulton AJM, Bus SA. <strong>Diabetic Foot Ulcers: A Review.</strong> <em>JAMA</em>. 2023;330(1):62–75. doi:10.1001/jama.2023.10578 — https://pmc.ncbi.nlm.nih.gov/articles/PMC10723802/</li><li>Armstrong DG, Boulton AJM, Bus SA. <strong>Diabetic Foot Ulcers and Their Recurrence.</strong> <em>NEJM</em>. 2017;376:2367–2375 — https://podimetrics.com/wp-content/uploads/2022/12/Armstrong-2017-Diabetic-foot-ulcers-and-their-recurrence.pdf</li><li><strong>Predictors of post-healing recurrence in patients with diabetic foot ulcers: a systematic review and meta-analysis</strong> (2024) — https://www.sciencedirect.com/science/article/abs/pii/S0965206X24001086</li><li><strong>Risk factors associated with the recurrence of diabetic foot ulcers: a meta-analysis</strong> <em>PLOS One</em> (2025) — https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318216</li><li><strong>Etiology, Epidemiology, and Disparities in the Burden of Diabetic Foot Ulcers.</strong> <em>Diabetes Care</em>. 2023;46(1):209 — https://diabetesjournals.org/care/article/46/1/209/148198/</li></ul>
+<p><em>Not medical advice. Figures cited from the linked peer-reviewed literature; they vary by population and method. Where a figure is stated in the JAMA 2023 review but not independently re-derived here, it is attributed to the review.</em></p></div>
+      <div data-dc-tpl="27" class="doc-pn"><span style="flex:1;"></span><a href="/intel/beyond-diabetes" style="flex:1; min-width:0; border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:18px 22px; color:#F2F4EF; text-align:right;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#70746B; margin-bottom:7px;">NEXT →</div><div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; line-height:1.25;">Foot risk beyond diabetes</div></a></div>
+    </div>
+  </div>
+
+  
+  <footer data-dc-tpl="28" style="border-top: 1px solid rgba(255, 255, 255, 0.07); background: rgb(10, 11, 10);">
+    <div data-dc-tpl="29" style="max-width: 1180px; margin: 0px auto; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div data-dc-tpl="30" style="display: flex; align-items: center; gap: 10px;">
+        <svg data-dc-tpl="31" width="20" height="27" viewBox="0 0 48 64" fill="none"><path data-dc-tpl="32" d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></path><circle data-dc-tpl="33" cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></circle></svg>
+        <span data-dc-tpl="34" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 15px;">openfootlab</span>
+      </div>
+      <div data-dc-tpl="35" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+        <a data-dc-tpl="36" href="mailto:build@openfootlab.com" class="scp2" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(168, 172, 162);">build@openfootlab.com</a>
+        <a data-dc-tpl="37" href="tel:+15615327120" class="scp3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(168, 172, 162);">561-532-7120</a>
+        <a data-dc-tpl="38" href="/privacy" class="scp0" style="font-size: 13px; color: rgb(168, 172, 162);">Privacy</a>
+        <a data-dc-tpl="39" href="/terms" class="scp0" style="font-size: 13px; color: rgb(168, 172, 162);">Terms</a>
+      </div>
+      <div data-dc-tpl="40" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(74, 77, 69); letter-spacing: 0.06em; text-align: right;">THE FOOT-HEALTH INTELLIGENCE THAT FEEDS THE ECOSYSTEM<br data-dc-tpl="41">© 2026 SWARM AND BEE LLC</div>
+    </div>
+  </footer></div></div></div>
+</body></html>

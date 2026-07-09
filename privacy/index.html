@@ -1,0 +1,130 @@
+<!DOCTYPE html><html><head><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — OpenFootlab</title>
+<meta name="description" content="How OpenFootlab handles your foot record. Your record stays owned by you — local-first, portable, yours to share.">
+<link rel="canonical" href="https://openfootlab.com/privacy">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy Policy — OpenFootlab">
+<meta property="og:description" content="How OpenFootlab handles your foot record. Your record stays owned by you — local-first, portable, yours to share.">
+<meta property="og:url" content="https://openfootlab.com/privacy">
+<style>x-dc{display:none!important}</style><script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="1"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" data-dc-tpl="2"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" data-dc-tpl="3"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' sc-camel-view-box='0 0 48 64'%3E%3Cpath d='M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z' fill='none' stroke='%23A3D93B' stroke-width='3'/%3E%3Ccircle cx='24' cy='21' r='6' fill='none' stroke='%23A3D93B' stroke-width='3'/%3E%3C/svg%3E" data-dc-tpl="4"><style data-dc-tpl="5">
+  html, body { margin: 0; padding: 0; background: #08090A; }
+  * { box-sizing: border-box; }
+  ::selection { background: rgba(163,217,59,0.28); color: #F2F4EF; }
+  a { color: #A3D93B; text-decoration: none; }
+  a:hover { color: #C4EE68; }
+</style></head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="OpenFootlab Privacy"><div data-dc-tpl="6" style="position: relative; background: rgb(8, 9, 10); color: rgb(242, 244, 239); font-family: &quot;Hanken Grotesk&quot;, system-ui, sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh;">
+
+  <nav data-dc-tpl="7" style="position: sticky; top: 0px; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: rgba(8, 9, 10, 0.72); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+    <a data-dc-tpl="8" href="/" style="display: flex; align-items: center; gap: 10px; color: rgb(242, 244, 239);">
+      <svg data-dc-tpl="9" width="22" height="29" viewBox="0 0 48 64" fill="none"><path data-dc-tpl="10" d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="#A3D93B" stroke-width="2.5"></path><circle data-dc-tpl="11" cx="24" cy="21" r="6" stroke="#A3D93B" stroke-width="2.5"></circle></svg>
+      <span data-dc-tpl="12" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -0.01em;">openfootlab</span>
+    </a>
+    <a data-dc-tpl="13" href="/" class="scp0" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(168, 172, 162);">← Back to site</a>
+  </nav>
+
+  <main data-dc-tpl="14" style="max-width: 760px; margin: 0px auto; padding: 72px 40px 96px;">
+    <div data-dc-tpl="15" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.16em; color: rgb(163, 217, 59); text-transform: uppercase; margin-bottom: 16px;">Privacy</div>
+    <h1 data-dc-tpl="16" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 46px; letter-spacing: -0.02em; line-height: 1.05; margin: 0px 0px 14px;">Privacy Policy</h1>
+    <p data-dc-tpl="17" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(112, 116, 107); letter-spacing: 0.06em; margin: 0px 0px 12px;">Last updated: July 2026</p>
+    <div data-dc-tpl="18" style="background: rgb(16, 18, 16); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 16px 20px; margin: 0px 0px 40px;">
+      <p data-dc-tpl="19" style="font-size: 13px; color: rgb(139, 143, 134); line-height: 1.6; margin: 0px;">Draft for review. This document describes our intended approach and is not a substitute for legal advice — final wording is pending counsel review.</p>
+    </div>
+
+    <p data-dc-tpl="20" style="font-size: 17px; line-height: 1.7; color: rgb(199, 202, 191); margin: 0px 0px 40px;">OpenFootlab is built around one principle: your foot record belongs to <strong data-dc-tpl="21" style="color: rgb(242, 244, 239); font-weight: 700;">you</strong>. This policy explains what we collect, how it's used, and the control you keep over it.</p>
+
+    <h2 data-dc-tpl="22" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; margin: 0px 0px 12px;">Your record stays yours</h2>
+    <p data-dc-tpl="23" style="font-size: 16px; line-height: 1.7; color: rgb(168, 172, 162); margin: 0px 0px 32px;">The Foot Passport is an owned, portable record. Your photos, notes, checks, and history are yours to keep, export, and take with you. We do not sell your data, and we do not use your foot photos or health information for advertising.</p>
+
+    <h2 data-dc-tpl="24" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; margin: 0px 0px 12px;">What we collect</h2>
+    <p data-dc-tpl="25" style="font-size: 16px; line-height: 1.7; color: rgb(168, 172, 162); margin: 0px 0px 12px;">To provide the service we collect only what's needed:</p>
+    <ul data-dc-tpl="26" style="font-size: 16px; line-height: 1.8; color: rgb(168, 172, 162); margin: 0px 0px 32px; padding-left: 22px;">
+      <li data-dc-tpl="27"><strong data-dc-tpl="28" style="color: rgb(242, 244, 239); font-weight: 600;">Account details</strong> — name and email, so you can sign in and we can reach you.</li>
+      <li data-dc-tpl="29"><strong data-dc-tpl="30" style="color: rgb(242, 244, 239); font-weight: 600;">Foot record content</strong> — photos, notes, daily checks, footwear and offloading history, temperature observations, and wound history that you choose to add.</li>
+      <li data-dc-tpl="31"><strong data-dc-tpl="32" style="color: rgb(242, 244, 239); font-weight: 600;">Order details</strong> — foot scans and measurements used to produce a custom insert, if you order one.</li>
+      <li data-dc-tpl="33"><strong data-dc-tpl="34" style="color: rgb(242, 244, 239); font-weight: 600;">Basic usage data</strong> — limited technical logs to keep the service reliable and secure.</li>
+    </ul>
+
+    <h2 data-dc-tpl="35" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; margin: 0px 0px 12px;">How we use it</h2>
+    <p data-dc-tpl="36" style="font-size: 16px; line-height: 1.7; color: rgb(168, 172, 162); margin: 0px 0px 32px;">We use your information to maintain your Foot Passport, produce custom devices you order, respond to your messages, and keep the service secure. We process health-related information only to provide the features you're using.</p>
+
+    <h2 data-dc-tpl="37" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; margin: 0px 0px 12px;">Sharing — only at your direction</h2>
+    <p data-dc-tpl="38" style="font-size: 16px; line-height: 1.7; color: rgb(168, 172, 162); margin: 0px 0px 32px;">Your record is shared with a clinician or caregiver only when <strong data-dc-tpl="39" style="color: rgb(242, 244, 239); font-weight: 600;">you</strong> choose to share it. We use service providers (for example, hosting and payment processing) strictly to operate OpenFootlab, under agreements that limit their use of your data. We disclose information only when legally required.</p>
+
+    <h2 data-dc-tpl="40" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; margin: 0px 0px 12px;">Storage &amp; security</h2>
+    <p data-dc-tpl="41" style="font-size: 16px; line-height: 1.7; color: rgb(168, 172, 162); margin: 0px 0px 32px;">We use encryption in transit and reasonable technical and organizational measures to protect your record. No system is perfectly secure, but access is limited to what's necessary to run the service.</p>
+
+    <h2 data-dc-tpl="42" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; margin: 0px 0px 12px;">Your rights</h2>
+    <p data-dc-tpl="43" style="font-size: 16px; line-height: 1.7; color: rgb(168, 172, 162); margin: 0px 0px 32px;">You can access, export, correct, or delete your record. Because the record is portable, you can take it with you or remove it at any time. To make a request, email us at <a data-dc-tpl="44" href="mailto:build@openfootlab.com">build@openfootlab.com</a>.</p>
+
+    <h2 data-dc-tpl="45" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; margin: 0px 0px 12px;">Contact</h2>
+    <p data-dc-tpl="46" style="font-size: 16px; line-height: 1.7; color: rgb(168, 172, 162); margin: 0px;">Questions about privacy? Reach us at <a data-dc-tpl="47" href="mailto:build@openfootlab.com">build@openfootlab.com</a>.</p>
+  </main>
+
+  <footer data-dc-tpl="48" style="border-top: 1px solid rgba(255, 255, 255, 0.07); background: rgb(10, 11, 10);">
+    <div data-dc-tpl="49" style="max-width: 1180px; margin: 0px auto; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div data-dc-tpl="50" style="display: flex; align-items: center; gap: 10px;">
+        <svg data-dc-tpl="51" width="20" height="27" viewBox="0 0 48 64" fill="none"><path data-dc-tpl="52" d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="#A3D93B" stroke-width="2.5"></path><circle data-dc-tpl="53" cx="24" cy="21" r="6" stroke="#A3D93B" stroke-width="2.5"></circle></svg>
+        <span data-dc-tpl="54" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 15px;">openfootlab</span>
+      </div>
+      <div data-dc-tpl="55" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+        <a data-dc-tpl="56" href="mailto:build@openfootlab.com" class="scp1" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(168, 172, 162);">build@openfootlab.com</a>
+        <a data-dc-tpl="57" href="tel:+15615327120" class="scp2" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(168, 172, 162);">561-532-7120</a>
+        <a data-dc-tpl="58" href="/privacy" class="scp0" style="font-size: 13px; color: rgb(168, 172, 162);">Privacy</a>
+        <a data-dc-tpl="59" href="/terms" class="scp0" style="font-size: 13px; color: rgb(168, 172, 162);">Terms</a>
+      </div>
+      <div data-dc-tpl="60" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(74, 77, 69); letter-spacing: 0.06em;">© 2026 SWARM AND BEE LLC</div>
+    </div>
+  </footer></div></div></div>
+
+
+</body></html>

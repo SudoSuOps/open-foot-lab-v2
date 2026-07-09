@@ -1,0 +1,164 @@
+<!DOCTYPE html><html><head><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intel — the defendable thinking — OpenFootlab</title>
+<meta name="description" content="The defendable thinking behind a foot-at-risk platform: sourced, cited, and verifiable foot-health intelligence.">
+<link rel="canonical" href="https://openfootlab.com/intel">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Intel — the defendable thinking — OpenFootlab">
+<meta property="og:description" content="The defendable thinking behind a foot-at-risk platform: sourced, cited, and verifiable foot-health intelligence.">
+<meta property="og:url" content="https://openfootlab.com/intel">
+<style>x-dc{display:none!important}</style><script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
+<style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="1"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" data-dc-tpl="2"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" data-dc-tpl="3"><style data-dc-tpl="4">
+  html, body { margin: 0; padding: 0; background: #08090A; }
+  * { box-sizing: border-box; }
+  ::selection { background: rgba(95,211,138,0.28); color: #F2F4EF; }
+  a { color: #5FD38A; text-decoration: none; }
+  a:hover { color: #8CE6AC; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style></head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="OpenFootlab Intel"><div data-dc-tpl="5" class="ofl" style="position: relative; background: rgb(8, 9, 10); color: rgb(242, 244, 239); font-family: &quot;Hanken Grotesk&quot;, system-ui, sans-serif; -webkit-font-smoothing: antialiased; min-height: 100vh; --accent: #5FD38A; --accent-bright: #97e2b3; --radius: 14px;">
+
+  
+  <nav data-dc-tpl="6" style="position: sticky; top: 0px; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: rgba(8, 9, 10, 0.72); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.07);">
+    <a data-dc-tpl="7" href="/" style="display: flex; align-items: center; gap: 10px; color: rgb(242, 244, 239);">
+      <svg data-dc-tpl="8" width="22" height="29" viewBox="0 0 48 64" fill="none"><path data-dc-tpl="9" d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></path><circle data-dc-tpl="10" cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></circle></svg>
+      <span data-dc-tpl="11" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 17px; letter-spacing: -0.01em;">openfootlab</span>
+    </a>
+    <div data-dc-tpl="12" style="display: flex; align-items: center; gap: 34px;">
+      <a data-dc-tpl="13" href="https://www.openfootlab.com/study" target="_blank" rel="noopener" class="scp0" style="font-size: 14px; color: rgb(168, 172, 162);">LocalStudy</a>
+      <a data-dc-tpl="14" href="/" class="scp0" style="font-size: 14px; color: rgb(168, 172, 162);">Foot Passport</a>
+      <a data-dc-tpl="15" href="#top" style="font-size: 14px; color: var(--accent, #5FD38A);">Intel</a>
+      <a data-dc-tpl="16" href="/inserts" class="scp0" style="font-size: 14px; color: rgb(168, 172, 162);">Inserts</a>
+      <a data-dc-tpl="17" href="/#contact" class="scp1" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; font-weight: 600; font-size: 14px; background: var(--accent, #5FD38A); color: rgb(12, 14, 10); border-radius: 9px; padding: 11px 20px;">The Foot Passport</a>
+    </div>
+  </nav>
+
+  
+  <section data-dc-tpl="18" id="top" style="position: relative; overflow: hidden;">
+    <div data-dc-tpl="19" style="position: absolute; inset: 0px; background: radial-gradient(50% 60% at 80% 15%, rgba(95, 211, 138, 0.09) 0%, transparent 60%); pointer-events: none;"></div>
+    <div data-dc-tpl="20" style="position: relative; max-width: 1180px; margin: 0px auto; padding: 80px 40px 48px;">
+      <div data-dc-tpl="21" style="display: inline-flex; align-items: center; gap: 8px; font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; letter-spacing: 0.14em; color: var(--accent, #5FD38A); text-transform: uppercase; border: 1px solid rgba(95, 211, 138, 0.3); border-radius: 100px; padding: 7px 14px; margin-bottom: 28px;">
+        <span data-dc-tpl="22" style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent, #5FD38A);"></span>The intelligence layer
+      </div>
+      <h1 data-dc-tpl="23" style="font-family: Archivo, sans-serif; font-weight: 900; font-size: 64px; line-height: 0.98; letter-spacing: -0.03em; margin: 0px 0px 22px;">The intel</h1>
+      <p data-dc-tpl="24" style="max-width: 560px; font-size: 19px; line-height: 1.55; color: rgb(199, 202, 191); margin: 0px 0px 10px; font-weight: 500;">The defendable thinking behind a foot-at-risk platform.</p>
+      <p data-dc-tpl="25" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 14px; color: var(--accent, #5FD38A); letter-spacing: 0.08em; margin: 0px;">Every claim sourced. Proven, not promised.</p>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="26" style="max-width: 1180px; margin: 0px auto; padding: 20px 40px 88px;">
+
+    
+    <a data-dc-tpl="27" href="/intel/defendable-data" class="scp2" style="display: block; color: inherit; background: rgb(16, 18, 16); border: 1px solid rgba(95, 211, 138, 0.28); border-radius: var(--radius, 14px); padding: 40px; margin-bottom: 16px;">
+      <div data-dc-tpl="28" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        <div data-dc-tpl="29" style="max-width: 720px;">
+          <div data-dc-tpl="30" style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+            <span data-dc-tpl="31" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: var(--accent, #5FD38A); letter-spacing: 0.1em;">★ FEATURED</span>
+            <span data-dc-tpl="32" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(112, 116, 107); letter-spacing: 0.1em;">CLINICAL CORE</span>
+          </div>
+          <h2 data-dc-tpl="33" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 30px; letter-spacing: -0.02em; margin: 0px 0px 14px;">The defendable data — the clinical core</h2>
+          <p data-dc-tpl="34" style="font-size: 16px; line-height: 1.6; color: rgb(168, 172, 162); margin: 0px;">Every number sourced to JAMA 2023 / NEJM: the DFU burden (18.6M/yr, $9–13B, &gt;70% mortality after amputation) and the recurrence engine (65% within 5 years) that makes the longitudinal record the moat.</p>
+        </div>
+        <span data-dc-tpl="35" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 22px; color: var(--accent, #5FD38A);">→</span>
+      </div>
+    </a>
+
+    <div data-dc-tpl="36" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      
+      <a data-dc-tpl="37" href="/intel/beyond-diabetes" class="scp3" style="display: flex; flex-direction: column; color: inherit; background: rgb(16, 18, 16); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius, 14px); padding: 32px;">
+        <div data-dc-tpl="38" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(112, 116, 107); letter-spacing: 0.1em; margin-bottom: 16px;">EPIDEMIOLOGY</div>
+        <h3 data-dc-tpl="39" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0px 0px 12px;">Foot risk beyond diabetes</h3>
+        <p data-dc-tpl="40" style="font-size: 15px; line-height: 1.55; color: rgb(168, 172, 162); margin: 0px 0px 22px; flex: 1 1 0%;">Trauma, neuropathy, PAD, RA — why the at-risk foot is a mechanism, not a diagnosis.</p>
+        <span data-dc-tpl="41" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--accent, #5FD38A);">Read →</span>
+      </a>
+      
+      <a data-dc-tpl="42" href="/intel/record-you-own" class="scp3" style="display: flex; flex-direction: column; color: inherit; background: rgb(16, 18, 16); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius, 14px); padding: 32px;">
+        <div data-dc-tpl="43" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(112, 116, 107); letter-spacing: 0.1em; margin-bottom: 16px;">POSITIONING</div>
+        <h3 data-dc-tpl="44" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0px 0px 12px;">Beyond diabetes, and the record you own</h3>
+        <p data-dc-tpl="45" style="font-size: 15px; line-height: 1.55; color: rgb(168, 172, 162); margin: 0px 0px 22px; flex: 1 1 0%;">Athletes as a wedge; and why the owned, portable, longitudinal record — not the model — is the product.</p>
+        <span data-dc-tpl="46" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--accent, #5FD38A);">Read →</span>
+      </a>
+      
+      <a data-dc-tpl="47" href="/intel/medgemma" class="scp3" style="display: flex; flex-direction: column; color: inherit; background: rgb(16, 18, 16); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius, 14px); padding: 32px;">
+        <div data-dc-tpl="48" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(112, 116, 107); letter-spacing: 0.1em; margin-bottom: 16px;">ACCURACY ROADMAP</div>
+        <h3 data-dc-tpl="49" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0px 0px 12px;">Getting the most out of MedGemma</h3>
+        <p data-dc-tpl="50" style="font-size: 15px; line-height: 1.55; color: rgb(168, 172, 162); margin: 0px 0px 22px; flex: 1 1 0%;">Capture quality → clinician ground truth → foot LoRA → SigLIP hybrid, measured against a golden set.</p>
+        <span data-dc-tpl="51" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--accent, #5FD38A);">Read →</span>
+      </a>
+      
+      <a data-dc-tpl="52" href="/intel/intelligence-layer" class="scp3" style="display: flex; flex-direction: column; color: inherit; background: rgb(16, 18, 16); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius, 14px); padding: 32px;">
+        <div data-dc-tpl="53" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(112, 116, 107); letter-spacing: 0.1em; margin-bottom: 16px;">STRATEGY</div>
+        <h3 data-dc-tpl="54" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0px 0px 12px;">OpenFootLab — the intelligence layer</h3>
+        <p data-dc-tpl="55" style="font-size: 15px; line-height: 1.55; color: rgb(168, 172, 162); margin: 0px 0px 22px; flex: 1 1 0%;">Why the lab domain feeds the ecosystem, with the defendable data behind it.</p>
+        <span data-dc-tpl="56" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: var(--accent, #5FD38A);">Read →</span>
+      </a>
+    </div>
+
+    <p data-dc-tpl="57" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(74, 77, 69); letter-spacing: 0.04em; margin: 34px 0px 0px; text-align: center;">Not medical advice. Figures cited from linked peer-reviewed literature; they vary by population and method.</p>
+  </section>
+
+  
+  <footer data-dc-tpl="58" style="border-top: 1px solid rgba(255, 255, 255, 0.07); background: rgb(10, 11, 10);">
+    <div data-dc-tpl="59" style="max-width: 1180px; margin: 0px auto; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div data-dc-tpl="60" style="display: flex; align-items: center; gap: 10px;">
+        <svg data-dc-tpl="61" width="20" height="27" viewBox="0 0 48 64" fill="none"><path data-dc-tpl="62" d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></path><circle data-dc-tpl="63" cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"></circle></svg>
+        <span data-dc-tpl="64" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 15px;">openfootlab</span>
+      </div>
+      <div data-dc-tpl="65" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+        <a data-dc-tpl="66" href="mailto:build@openfootlab.com" class="scp4" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(168, 172, 162);">build@openfootlab.com</a>
+        <a data-dc-tpl="67" href="tel:+15615327120" class="scp5" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 13px; color: rgb(168, 172, 162);">561-532-7120</a>
+        <a data-dc-tpl="68" href="/privacy" class="scp0" style="font-size: 13px; color: rgb(168, 172, 162);">Privacy</a>
+        <a data-dc-tpl="69" href="/terms" class="scp0" style="font-size: 13px; color: rgb(168, 172, 162);">Terms</a>
+      </div>
+      <div data-dc-tpl="70" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; color: rgb(74, 77, 69); letter-spacing: 0.06em; text-align: right;">THE FOOT-HEALTH INTELLIGENCE THAT FEEDS THE ECOSYSTEM<br data-dc-tpl="71">© 2026 SWARM AND BEE LLC</div>
+    </div>
+  </footer></div></div></div>
+</body></html>
