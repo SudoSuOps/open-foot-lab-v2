@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.openfootlab.com/</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/inserts.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/intel.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/privacy.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/terms.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/intel/the-defendable-data.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/intel/foot-risk-beyond-diabetes.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/intel/beyond-diabetes-and-the-record-you-own.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/intel/getting-the-most-from-medgemma.html</loc><lastmod>2026-07-09</lastmod></url>
-  <url><loc>https://www.openfootlab.com/intel/openfootlab-the-intelligence-layer.html</loc><lastmod>2026-07-09</lastmod></url>
+<url><loc>https://www.openfootlab.com/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/inserts</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/intel</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/privacy</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/terms</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/intel/beyond-diabetes-and-the-record-you-own</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/intel/foot-risk-beyond-diabetes</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/intel/getting-the-most-from-medgemma</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/intel/openfootlab-the-intelligence-layer</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://www.openfootlab.com/intel/the-defendable-data</loc><changefreq>weekly</changefreq></url>
 </urlset>
