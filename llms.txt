@@ -38,6 +38,7 @@ Positioning and claims (important for accuracy):
 ## Contact
 - Email: build@openfootlab.com
 - Phone: +1 561-532-7120
+- X / Twitter: https://x.com/openfootlab
 
 ## Brand
 - Standalone brand. Accent: lime #A3D93B. Type: Archivo (display), Hanken Grotesk (body), JetBrains Mono (technical). Custom insole + pressure-relief-ring mark.
