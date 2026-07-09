@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://openfootlab.com/</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/OpenFootlab%20Landing.dc.html</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/OpenFootlab%20Intel.dc.html</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/OpenFootlab%20Privacy.dc.html</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/OpenFootlab%20Terms.dc.html</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/OpenFootlab%20Landing.dc</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/OpenFootlab%20Intel.dc</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/OpenFootlab%20Privacy.dc</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/OpenFootlab%20Terms.dc</loc><changefreq>weekly</changefreq></url>
 </urlset>
