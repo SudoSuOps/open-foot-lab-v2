@@ -1,0 +1,55 @@
+:root{
+  --accent:#5FD38A; --accent-bright:#8CE6AC; --radius:14px;
+  /* palette reference */
+  --void:#08090A; --void-2:#0B0C0A; --panel:#101210; --panel-2:#1B1E1A;
+  --fg-1:#F2F4EF; --fg-2:#C7CABF; --fg-3:#A8ACA2; --fg-4:#8B8F86; --fg-5:#70746B;
+  --lime:#A3D93B; --alert:#E8654F;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:#08090A;}
+body{font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:#F2F4EF;}
+::selection{background:rgba(95,211,138,0.28);color:#F2F4EF;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{color:var(--accent-bright);}
+img{max-width:100%;}
+button{font:inherit;}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important;}}
+html{scroll-behavior:smooth;}
+
+/* ---- doc reader ---- */
+.doc-content h1{font-family:'Archivo',sans-serif;font-weight:800;font-size:34px;letter-spacing:-0.02em;margin:0 0 10px;color:#F2F4EF;line-height:1.1;}
+.doc-content h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.01em;margin:44px 0 14px;color:#F2F4EF;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);scroll-margin-top:84px;}
+.doc-content h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;margin:28px 0 10px;color:#F2F4EF;}
+.doc-content p{font-size:16px;line-height:1.7;color:#C7CABF;margin:0 0 16px;}
+.doc-content strong{color:#F2F4EF;font-weight:700;}
+.doc-content em{color:#C7CABF;font-style:italic;}
+.doc-content a{color:var(--accent);}
+.doc-content ul,.doc-content ol{margin:0 0 18px;padding-left:22px;}
+.doc-content li{font-size:16px;line-height:1.6;color:#C7CABF;margin:0 0 8px;}
+.doc-content blockquote{margin:0 0 20px;padding:6px 0 6px 20px;border-left:3px solid var(--accent);color:#F2F4EF;font-size:17px;line-height:1.55;}
+.doc-content code{font-family:'JetBrains Mono',monospace;font-size:13px;background:#1B1E1A;padding:2px 6px;border-radius:5px;color:#C7CABF;}
+.doc-content hr{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:34px 0;}
+.doc-content table{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:14px;}
+.doc-content th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent);padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.16);}
+.doc-content td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.06);color:#C7CABF;vertical-align:top;line-height:1.5;}
+.doc-wrap{display:grid;grid-template-columns:210px minmax(0,1fr);gap:48px;max-width:1000px;margin:0 auto;padding:48px 40px 96px;}
+.doc-toc{position:sticky;top:84px;align-self:start;}
+.doc-toc .toc-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:14px;}
+.doc-toc a{display:block;font-size:13px;color:#8B8F86;padding:6px 0 6px 14px;border-left:1px solid rgba(255,255,255,0.1);line-height:1.45;}
+.doc-toc a:hover{color:var(--accent);border-left-color:var(--accent);}
+.doc-pn{display:flex;gap:16px;margin-top:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08);}
+.doc-pn a{flex:1;min-width:0;border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px 22px;color:#F2F4EF;}
+.doc-pn a:hover{border-color:var(--accent);}
+@media (max-width:880px){.doc-wrap{grid-template-columns:1fr;gap:0;}.doc-toc{display:none;}}
+
+/* ---- responsive ---- */
+@media (max-width:900px){
+  div[style*="grid-template-columns:1.02fr"],div[style*="grid-template-columns:1.05fr"],div[style*="grid-template-columns:1fr 0.85fr"],div[style*="grid-template-columns:auto 1fr"],div[style*="grid-template-columns:1fr 1fr"],div[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr !important;}
+  nav[style*="position:sticky"]{padding-left:20px !important;padding-right:20px !important;}
+  nav[style*="position:sticky"] > div[style*="gap:34px"]{gap:16px !important;flex-wrap:wrap;justify-content:flex-end;}
+}
+@media (max-width:640px){
+  section > div[style*="padding:"], footer > div[style*="padding:"], main[style*="padding:"]{padding-left:22px !important;padding-right:22px !important;}
+  h1[style]{font-size:clamp(38px,10vw,60px) !important;}
+  nav[style*="position:sticky"] > div[style*="gap:34px"] a[style*="font-size:14px"]{font-size:13px !important;}
+}

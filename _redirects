@@ -1,0 +1,6 @@
+# legacy prototype filenames -> production routes
+/OpenFootlab%20Passport.dc.html   /            301
+/OpenFootlab%20Landing.dc.html    /inserts.html 301
+/OpenFootlab%20Intel.dc.html      /intel.html   301
+/OpenFootlab%20Privacy.dc.html    /privacy.html 301
+/OpenFootlab%20Terms.dc.html      /terms.html   301

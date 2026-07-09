@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting the most out of MedGemma — OpenFootlab Intel</title>
+<meta name="description" content="Capture quality, clinician ground truth, a foot LoRA and SigLIP hybrid, measured against a golden set.">
+<link rel="canonical" href="https://www.openfootlab.com/intel/getting-the-most-from-medgemma.html">
+<meta name="theme-color" content="#08090A">
+<meta property="og:site_name" content="OpenFootlab">
+<meta property="og:title" content="Getting the most out of MedGemma — OpenFootlab Intel">
+<meta property="og:description" content="Capture quality, clinician ground truth, a foot LoRA and SigLIP hybrid, measured against a golden set.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.openfootlab.com/intel/getting-the-most-from-medgemma.html">
+<meta property="og:image" content="https://www.openfootlab.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div style="position:relative; background:#08090A; color:#F2F4EF; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; min-height:100vh;">
+  <nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 40px; background:rgba(8,9,10,0.72); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(255,255,255,0.07);">
+    <a href="../index.html" style="display:flex; align-items:center; gap:10px; color:#F2F4EF;">
+      <svg width="22" height="29" viewBox="0 0 48 64" fill="none"><path d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/><circle cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/></svg>
+      <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:17px; letter-spacing:-0.01em;">openfootlab</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:34px;">
+      <a href="https://www.openfootlab.com/study" target="_blank" rel="noopener" style="font-size:14px; color:#A8ACA2;" data-hover="color:#F2F4EF;">LocalStudy</a>
+      <a href="../index.html" style="font-size:14px; color:#A8ACA2;" data-hover="color:#F2F4EF;">Foot Passport</a>
+      <a href="../intel.html" style="font-size:14px; color:var(--accent, #5FD38A);">Intel</a>
+      <a href="../inserts.html" style="font-size:14px; color:#A8ACA2;" data-hover="color:#F2F4EF;">Inserts</a>
+      <a href="../index.html#contact" style="font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:14px; background:var(--accent, #5FD38A); color:#0C0E0A; border-radius:9px; padding:11px 20px;" data-hover="background:var(--accent-bright); color:#0C0E0A;">The Foot Passport</a>
+    </div>
+  </nav>
+  <div class="doc-wrap">
+    <aside class="doc-toc"><div class="toc-label">On this page</div><a href="#sec0">Where we actually are</a><a href="#sec1">The levers, in ROI order</a><a href="#sec2">How we prove "better" (not vibes)</a><a href="#sec3">Edge reality — the NAS is the appliance</a><a href="#sec4">The honest sequence</a></aside>
+    <div style="min-width:0;">
+      <a href="../intel.html" style="display:inline-flex; align-items:center; gap:7px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#A8ACA2; letter-spacing:0.06em; margin-bottom:28px;" data-hover="color:var(--accent, #5FD38A);"><span style="font-family:'JetBrains Mono',monospace;">&larr;</span> INTEL</a>
+      <div style="display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:var(--accent, #5FD38A); text-transform:uppercase; border:1px solid rgba(95,211,138,0.3); border-radius:100px; padding:6px 12px; margin-bottom:28px;">
+        <span style="width:5px; height:5px; border-radius:50%; background:var(--accent, #5FD38A);"></span>Sourced
+      </div>
+      <div class="doc-content">
+<h1>Getting the most out of MedGemma — an accuracy roadmap for OpenFootLab</h1>
+<p><em>How we go from "it produces plausible observations" to "it produces observations a podiatrist trusts." Grounded in FL-STUDY-001 (Gemma 3 27B vs MedGemma 27B on 35 real foot photos).</em></p>
+<h2 id="sec0">Where we actually are</h2>
+<p>The study told us three things, honestly:</p>
+<ol><li><strong>Reliability is solved</strong> — both models return valid closed-schema JSON 100% of the time.</li><li><strong>The models disagree on what they see</strong> — near-zero κ on redness, swelling, pressure. The</li></ol>
+<p>   specialization changes the observation, not just the wording.</p>
+<ol><li><strong>We cannot yet measure accuracy</strong> — there is no ground truth on the box. We know the models</li></ol>
+<p>   <em>differ</em>; we don't know which is <em>right</em>.</p>
+<p>So the first move is not a bigger model. It's <strong>building the thing that lets us measure accuracy at all</strong> — ground truth. Everything else is unfalsifiable without it.</p>
+<h2 id="sec1">The levers, in ROI order</h2>
+<h3>0. Ground truth first (the unlock)</h3>
+<p>Accuracy is undefined until we have labels. The <strong>Tier-2 blinded clinician packet is not just a verdict — it is a label factory.</strong> Every photo a podiatrist adjudicates becomes a golden-set label. Target: a few hundred clinician-labeled foot photos → the <strong>golden set</strong> and the regression harness. From then on, "better" means <em>higher agreement with the golden set</em>, tracked per model version. No golden-set movement, no accuracy claim. (Skills: <code>golden-set</code>, <code>eval-curator</code>, <code>local-study</code>.)</p>
+<h3>1. Capture quality — the biggest cheap win</h3>
+<p>MedGemma normalizes every image to <strong>896×896, 256 tokens</strong>. A blurry, oblique, badly-lit photo is information-destroyed <em>before</em> the model sees it. Standardize capture and accuracy moves more than any model swap:</p>
+<ul><li>consistent <strong>white-matte background, even lighting, fixed distance/angle</strong> (already in the</li></ul>
+<p>  baseline protocol),</p>
+<ul><li>a <strong>scale/color reference</strong> in frame (a sticker) so size and redness are calibratable,</li><li><strong>multiple standard views</strong> per session, not one hero shot (SENTINEL 4-view: dorsal, plantar,</li></ul>
+<p>  medial, lateral + the site close-up). One angle hides half a foot. (Skill: <code>sentinel-capture</code>.)</p>
+<h3>2. Give the model context, not a lone frame</h3>
+<ul><li><strong>Prior image for comparison</strong> (the ComparisonEngine / <code>vault-longitudinal</code>) — change detection</li></ul>
+<p>  is the whole point, and a model reasons better about "vs. yesterday" than about an absolute.</p>
+<ul><li><strong>The patient profile</strong> in-context — "diabetic, insensate, post-amputation" vs "marathon</li></ul>
+<p>  runner, intact sensation" should change how a red patch is weighted.</p>
+<ul><li><strong>Multi-view in one call</strong> — feed the standard views together so the model sees the whole foot.</li></ul>
+<h3>3. Prompt + few-shot (cheap, but gated)</h3>
+<p>MedGemma is prompt-sensitive. In-context <strong>reference exemplars</strong> ("this image = moderate redness," "this = an open wound") anchor the closed vocabulary far better than words alone. Every prompt change is pinned, hashed, and must pass the golden set before it ships (<code>canary-then-cook</code>).</p>
+<h3>4. Keep the division of labor (already right)</h3>
+<p>The model <strong>observes</strong>; deterministic code <strong>tiers and escalates</strong>. Never ask the model to be the whole system — a hallucinated tier is unbounded, a hallucinated <em>observation</em> is caught by the closed schema and the safety layer. This is why the study showed 0 diagnosis/dosing leaks. Hold this line as we add capability.</p>
+<h3>5. Fine-tune a foot-specific LoRA (where domain accuracy is won)</h3>
+<p>MedGemma's SigLIP encoder was pre-trained on dermatology (skin) — a <strong>head start</strong>, but diabetic foot wounds are out-of-distribution (FL-STUDY-001's whole premise). The durable fix is a <strong>foot-specific LoRA</strong> on MedGemma, trained on the clinician-labeled golden set + the opt-in passport-donation flywheel. Cook the 27B for the ceiling; distill/LoRA a <strong>4B</strong> for the edge box. (Skills: <code>medgemma-finetune</code>, <code>harvest</code>, <code>canary-then-cook</code>.)</p>
+<h3>6. Hybrid: MedSigLIP classifier for the closed fields</h3>
+<p>For the <em>categorical</em> observations (wound present? redness severity?), a fine-tuned <strong>MedSigLIP</strong> classifier is more measurable and more reliable than generative text — and gives calibrated probabilities the safety layer can threshold. Best system = <strong>SigLIP classifier for the closed tags + MedGemma for the human-readable narrative</strong>, cross-checked against each other.</p>
+<h3>7. Ensemble &amp; self-consistency</h3>
+<p>Sample N times (or run base + specialized) and <strong>majority-vote the categorical fields</strong>; flag disagreement for human review instead of guessing. Turns the study's low-κ divergence into a <em>signal</em> ("the models disagree here — look closer") instead of a coin flip.</p>
+<h3>8. The flywheel (the compounding lever)</h3>
+<p>Every clinician correction in the passport becomes a new training label, <strong>locally</strong>. The system gets more accurate the more it's used — the harvest loop, not a one-time cook. (Skill: <code>harvest</code>.)</p>
+<h2 id="sec2">How we prove "better" (not vibes)</h2>
+<p>Golden set + regression harness. Accuracy = <strong>agreement with clinician labels</strong>, per model version, published as a LocalStudy re-run. Deterministic gates, never a model grading a model. The number has to move on labeled data, or the change didn't help.</p>
+<h2 id="sec3">Edge reality — the NAS is the appliance</h2>
+<ul><li><strong>Cook tier:</strong> 27B BF16 on the rails rig (2× RTX PRO 6000) — training, golden-set eval, the</li></ul>
+<p>  ceiling number.</p>
+<ul><li><strong>Serve/edge tier:</strong> a quantized 4B foot-LoRA on the <strong>NAS / edge box</strong> — the thing that</li></ul>
+<p>  actually runs in someone's home, all local. The study's ~21 s/photo on the big rig sets the   ceiling; the edge number is what we report for the appliance. (Skills: <code>edge-sku-deploy</code>,   <code>medgemma-ops</code>.)</p>
+<h2 id="sec4">The honest sequence</h2>
+<ol><li>Standardize capture (multi-view, calibrated).</li><li>Build the clinician-labeled <strong>golden set</strong> (ground truth) from the Tier-2 packets.</li><li>Add context: prior-image comparison, profile, few-shot exemplars.</li><li><strong>Fine-tune the foot LoRA</strong>; add the SigLIP classifier hybrid.</li><li>Measure every step against the golden set; ship only what moves it.</li></ol>
+<p>Bigger model is step 4, not step 1. Accuracy is won on <strong>capture, ground truth, and domain fine-tuning</strong> — in that order.</p>
+      </div>
+      <div class="doc-pn"><a href="beyond-diabetes-and-the-record-you-own.html" style="text-align:left;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#70746B; margin-bottom:7px;">← PREVIOUS</div><div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; line-height:1.25;">Beyond diabetes, and the record you own</div></a><a href="openfootlab-the-intelligence-layer.html" style="text-align:right;"><div style="font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#70746B; margin-bottom:7px;">NEXT →</div><div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; line-height:1.25;">OpenFootLab — the intelligence layer</div></a></div>
+    </div>
+  </div>
+  <footer style="border-top:1px solid rgba(255,255,255,0.07); background:#0A0B0A;">
+    <div style="max-width:1180px; margin:0 auto; padding:40px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <svg width="20" height="27" viewBox="0 0 48 64" fill="none"><path d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/><circle cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/></svg>
+        <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:15px;">openfootlab</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; flex-wrap:wrap;">
+        <a href="mailto:build@openfootlab.com" style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#A8ACA2;" data-hover="color:var(--accent, #5FD38A);">build@openfootlab.com</a>
+        <a href="../privacy.html" style="font-size:13px; color:#A8ACA2;" data-hover="color:#F2F4EF;">Privacy</a>
+        <a href="../terms.html" style="font-size:13px; color:#A8ACA2;" data-hover="color:#F2F4EF;">Terms</a>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#4A4D45; letter-spacing:0.06em; text-align:right;">THE FOOT-HEALTH INTELLIGENCE THAT FEEDS THE ECOSYSTEM<br>&copy; 2026 SWARM AND BEE LLC</div>
+    </div>
+  </footer>
+</div>
+<script src="../app.js" defer></script>
+</body>
+</html>
