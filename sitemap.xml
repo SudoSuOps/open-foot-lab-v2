@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://openfootlab.com/</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/inserts</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/intel</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/privacy</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/terms</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/intel/beyond-diabetes</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/intel/defendable-data</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/intel/intelligence-layer</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/intel/medgemma</loc><changefreq>weekly</changefreq></url>
-<url><loc>https://openfootlab.com/intel/record-you-own</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/inserts/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/intel/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/privacy/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/terms/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/intel/beyond-diabetes/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/intel/defendable-data/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/intel/intelligence-layer/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/intel/medgemma/</loc><changefreq>weekly</changefreq></url>
+<url><loc>https://openfootlab.com/intel/record-you-own/</loc><changefreq>weekly</changefreq></url>
 </urlset>
