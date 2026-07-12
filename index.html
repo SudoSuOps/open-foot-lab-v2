@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OpenFootlab — The foot-at-risk platform & Foot Passport</title>
+<title>OpenFootLab — The foot-at-risk platform & Foot Passport</title>
 <meta name="description" content="Own your foot record and catch risk earlier. OpenFootLab helps people at foot risk build a living Foot Passport — a private, portable record of photos, scans, measurements, inserts, wounds, surgeries, and care history.">
 <link rel="canonical" href="https://www.openfootlab.com/">
 <meta name="theme-color" content="#08090A">
-<meta property="og:site_name" content="OpenFootlab">
-<meta property="og:title" content="OpenFootlab — Foot risk is a mechanism, not a diagnosis">
+<meta property="og:site_name" content="OpenFootLab">
+<meta property="og:title" content="OpenFootLab — Foot risk is a mechanism, not a diagnosis">
 <meta property="og:description" content="Own your foot record and catch risk earlier. OpenFootLab helps people at foot risk build a living Foot Passport — a private, portable record of photos, scans, measurements, inserts, wounds, surgeries, and care history.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.openfootlab.com/">
 <meta property="og:image" content="https://www.openfootlab.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OpenFootlab — Foot risk is a mechanism, not a diagnosis">
+<meta name="twitter:title" content="OpenFootLab — Foot risk is a mechanism, not a diagnosis">
 <meta name="twitter:description" content="Own your foot record and catch risk earlier. OpenFootLab helps people at foot risk build a living Foot Passport — a private, portable record of photos, scans, measurements, inserts, wounds, surgeries, and care history.">
 <meta name="twitter:image" content="https://www.openfootlab.com/assets/og.png">
 <link rel="icon" href="assets/favicon.svg">
+<link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
       "@type": "Organization",
       "@id": "https://www.openfootlab.com/#org",
       "name": "OpenFootLab",
-      "alternateName": "OpenFootlab",
+      "alternateName": "OpenFootLab",
       "url": "https://www.openfootlab.com/",
       "email": "build@openfootlab.com",
       "telephone": "+1-561-532-7120",
@@ -173,13 +174,33 @@
     <div style="max-width:960px; margin:0 auto; padding:88px 40px; display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:start;">
       <div style="width:112px; height:112px; border-radius:50%; overflow:hidden; border:1px solid rgba(255,255,255,0.12); flex:none; position:relative; display:flex; align-items:center; justify-content:center; background:radial-gradient(120% 120% at 30% 25%, #1c1f19, #0f110d);">
         <svg width="40" height="53" viewBox="0 0 48 64" fill="none" style="opacity:0.5;"><path d="M24 3 C33 3 38 9 38 18 C38 26 35 30 35 38 C35 48 33 61 24 61 C15 61 13 48 13 38 C13 30 10 26 10 18 C10 9 15 3 24 3 Z" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/><circle cx="24" cy="21" r="6" stroke="var(--accent, #5FD38A)" stroke-width="2.5"/></svg>
-        <img src="assets/founder.jpg" alt="OpenFootlab founder" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" onerror="this.remove();" />
+        <img src="assets/founder.jpg" alt="OpenFootLab founder" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;" onerror="this.remove();" />
       </div>
       <div>
         <svg width="34" height="28" viewBox="0 0 24 24" fill="var(--accent, #A3D93B)" style="opacity:0.9; margin-bottom:18px;"><path d="M7 7H4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h3v3a1 1 0 0 1-1 1H5a1 1 0 0 0 0 2h1a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zm11 0h-3a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h3v3a1 1 0 0 1-1 1h-1a1 1 0 0 0 0 2h1a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1z"/></svg>
         <p style="font-family:'Archivo',sans-serif; font-weight:600; font-size:26px; line-height:1.4; letter-spacing:-0.01em; margin:0 0 22px; color:#F2F4EF;">&ldquo;I personally see my foot health as my <span style="color:var(--accent, #A3D93B);">#1 condition</span> &mdash; not diabetes. Diabetes increases complications and risk &mdash; yes. But the foot is what I manage.&rdquo;</p>
         <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#8B8F86; letter-spacing:0.04em;">&mdash; the founder · type-1 diabetic, post-amputation, healing</div>
       </div>
+    </div>
+
+    <!-- evidence stats -->
+    <div style="max-width:960px; margin:0 auto; padding:0 40px 88px;">
+      <div style="margin-bottom:18px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:var(--accent, #A3D93B); text-transform:uppercase;">Why earlier matters</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+        <div style="background:#101210; border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius,14px); padding:28px;">
+          <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:36px; line-height:1; color:var(--accent, #A3D93B);">18.6M</div>
+          <p style="font-size:14px; line-height:1.55; color:#A8ACA2; margin:12px 0 0;">diabetic foot ulcers worldwide each year &mdash; the most-studied at-risk foot.</p>
+        </div>
+        <div style="background:#101210; border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius,14px); padding:28px;">
+          <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:36px; line-height:1; color:var(--accent, #A3D93B);">&gt;70%</div>
+          <p style="font-size:14px; line-height:1.55; color:#A8ACA2; margin:12px 0 0;">mortality within five years of a major amputation &mdash; higher than many cancers.</p>
+        </div>
+        <div style="background:#101210; border:1px solid rgba(255,255,255,0.08); border-radius:var(--radius,14px); padding:28px;">
+          <div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:36px; line-height:1; color:var(--accent, #A3D93B);">~65%</div>
+          <p style="font-size:14px; line-height:1.55; color:#A8ACA2; margin:12px 0 0;">of healed ulcers recur within five years &mdash; the record is what catches the next one.</p>
+        </div>
+      </div>
+      <p style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.6; color:#4A4D45; letter-spacing:0.04em; margin:16px 0 0;">Diabetic-foot figures shown as the anchor &mdash; the most-studied at-risk foot. Sources: peer-reviewed literature incl. JAMA (2023). OpenFootLab serves <span style="color:#70746B;">every at-risk foot</span> &mdash; diabetes, neuropathy, poor circulation, surgery, prior wounds, deformity, and more. Diabetes is our deepest expertise, not our only one.</p>
     </div>
   </section>
 

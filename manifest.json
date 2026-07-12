@@ -1,0 +1,12 @@
+{
+  "name": "OpenFootLab — Foot Passport",
+  "short_name": "OpenFootLab",
+  "description": "Own your foot record. Catch risk earlier. A private, portable foot-health record for every at-risk foot.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090A",
+  "theme_color": "#08090A",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

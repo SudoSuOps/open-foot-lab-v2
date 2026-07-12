@@ -3,7 +3,7 @@
 // Configure a provider by setting environment variables in the Pages project:
 //   RESEND_API_KEY  (create at resend.com; verify the openfootlab.com domain)
 //   CONTACT_TO      (default build@openfootlab.com)
-//   CONTACT_FROM    (default "OpenFootlab <build@openfootlab.com>")
+//   CONTACT_FROM    (default "OpenFootLab <build@openfootlab.com>")
 // Without RESEND_API_KEY the endpoint still returns { ok:true } so the UI succeeds,
 // but no email is sent — set the key before launch.
 
@@ -28,7 +28,7 @@ export async function onRequestPost(context) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: env.CONTACT_FROM || 'OpenFootlab <build@openfootlab.com>',
+          from: env.CONTACT_FROM || 'OpenFootLab <build@openfootlab.com>',
           to: [env.CONTACT_TO || 'build@openfootlab.com'],
           reply_to: email,
           subject: 'New enquiry from ' + name,
