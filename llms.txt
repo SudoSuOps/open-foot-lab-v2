@@ -8,15 +8,15 @@ publishes sourced research under Intel. Operated by Swarm and Bee LLC.
 
 ## Core pages
 - [Home / Foot Passport](https://www.openfootlab.com/): the foot-at-risk thesis and the owned foot record — photos over time, checks, footwear/offloading history, clinician-ready timelines.
-- [Inserts](https://www.openfootlab.com/inserts.html): custom 3D-printed TPU offloading inserts and toe fillers, designed from a scan to redistribute pressure across the foot.
-- [Intel](https://www.openfootlab.com/intel.html): sourced deep-dives on foot-at-risk epidemiology and the platform thesis.
+- [Inserts](https://www.openfootlab.com/inserts): custom 3D-printed TPU offloading inserts and toe fillers, designed from a scan to redistribute pressure across the foot.
+- [Intel](https://www.openfootlab.com/intel): sourced deep-dives on foot-at-risk epidemiology and the platform thesis.
 
 ## Intel (sourced)
-- [The defendable data](https://www.openfootlab.com/intel/the-defendable-data.html): DFU burden and recurrence (JAMA 2023 / NEJM); why the longitudinal record is the moat.
-- [Foot risk beyond diabetes](https://www.openfootlab.com/intel/foot-risk-beyond-diabetes.html): trauma, neuropathy, PAD, CIPN, RA — the at-risk foot is a mechanism, not a diagnosis.
-- [Beyond diabetes, and the record you own](https://www.openfootlab.com/intel/beyond-diabetes-and-the-record-you-own.html): athletes as a wedge; the owned longitudinal record is the product.
-- [Getting the most out of MedGemma](https://www.openfootlab.com/intel/getting-the-most-from-medgemma.html): an accuracy roadmap grounded in capture quality and clinician ground truth.
-- [The intelligence layer](https://www.openfootlab.com/intel/openfootlab-the-intelligence-layer.html): why the lab feeds the ecosystem.
+- [The defendable data](https://www.openfootlab.com/intel/the-defendable-data): DFU burden and recurrence (JAMA 2023 / NEJM); why the longitudinal record is the moat.
+- [Foot risk beyond diabetes](https://www.openfootlab.com/intel/foot-risk-beyond-diabetes): trauma, neuropathy, PAD, CIPN, RA — the at-risk foot is a mechanism, not a diagnosis.
+- [Beyond diabetes, and the record you own](https://www.openfootlab.com/intel/beyond-diabetes-and-the-record-you-own): athletes as a wedge; the owned longitudinal record is the product.
+- [Getting the most out of MedGemma](https://www.openfootlab.com/intel/getting-the-most-from-medgemma): an accuracy roadmap grounded in capture quality and clinician ground truth.
+- [The intelligence layer](https://www.openfootlab.com/intel/openfootlab-the-intelligence-layer): why the lab feeds the ecosystem.
 
 ## Policy
 - Inserts are custom-fit accommodative devices, not medical devices; they are not intended to diagnose, treat, cure, or prevent any condition.
