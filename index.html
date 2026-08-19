@@ -470,6 +470,61 @@
   </section>
 
   <!-- ============ BRIDGE TO INSERTS ============ -->
+    <!-- what an insert actually is -->
+    <div id="builds" style="border-top:1px solid rgba(34,32,28,0.09); background:#F2EEE6;">
+      <div style="max-width:1040px; margin:0 auto; padding:88px 40px;">
+        <div style="margin-bottom:14px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em; color:var(--accent, #1F6F4A); text-transform:uppercase;">What we build</div>
+        <h2 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:34px; line-height:1.15; color:#22201C; margin:0 0 12px;">Offloading is geometry, not padding.</h2>
+        <p style="font-size:16px; line-height:1.65; color:#5E5B54; margin:0 0 14px; max-width:64ch;">
+          A soft insole spreads load. An offloading insert <em>moves</em> it &mdash; off the spot that is
+          taking the damage and onto the parts of the foot that can carry it. That is a shape problem, and
+          shape is something you can specify, print, and print again.
+        </p>
+        <p style="font-size:15px; line-height:1.65; color:#5E5B54; margin:0 0 36px; max-width:64ch;">
+          Every insert below came out of one file &mdash; <span style="font-family:'JetBrains Mono',monospace; font-size:13px;">insert_parametric.scad</span> &mdash;
+          driven to different numbers. Nothing here is a stock photo; these are renders of the actual geometry.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+
+          <figure style="margin:0; background:#FFFDF9; border:1px solid rgba(34,32,28,0.11); border-radius:var(--radius,14px); overflow:hidden;">
+            <img src="assets/inserts/standard.png" alt="Standard offloading insert — 8 mm heel cup, 9 mm arch, rendered from the parametric CAD source" loading="lazy" style="display:block; width:100%; height:auto; background:#F6F2EA;">
+            <figcaption style="padding:20px 22px 22px;">
+              <div style="font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:17px; color:#22201C; margin-bottom:6px;">Standard offload</div>
+              <p style="font-size:14px; line-height:1.55; color:#5E5B54; margin:0 0 12px;">The everyday build. Heel cup holds the fat pad where it belongs; the arch takes load off the forefoot.</p>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.7; color:#6E6A5F;">CUP_H 8 · ARCH_H 9 · T 5</div>
+            </figcaption>
+          </figure>
+
+          <figure style="margin:0; background:#FFFDF9; border:1px solid rgba(34,32,28,0.11); border-radius:var(--radius,14px); overflow:hidden;">
+            <img src="assets/inserts/high-arch.png" alt="High-arch offloading insert — 12 mm heel cup, 14 mm arch, deeper relief for a high-pressure forefoot" loading="lazy" style="display:block; width:100%; height:auto; background:#F6F2EA;">
+            <figcaption style="padding:20px 22px 22px;">
+              <div style="font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:17px; color:#22201C; margin-bottom:6px;">Deep relief</div>
+              <p style="font-size:14px; line-height:1.55; color:#5E5B54; margin:0 0 12px;">When the record shows pressure concentrating, the cup and arch go deeper &mdash; more load moved, further from the spot.</p>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.7; color:#6E6A5F;">CUP_H 12 · ARCH_H 14 · T 6</div>
+            </figcaption>
+          </figure>
+
+          <figure style="margin:0; background:#FFFDF9; border:1px solid rgba(34,32,28,0.11); border-radius:var(--radius,14px); overflow:hidden;">
+            <img src="assets/inserts/left-pair.png" alt="Left-foot build of the same insert — handedness is a parameter in the CAD, not a separate file" loading="lazy" style="display:block; width:100%; height:auto; background:#F6F2EA;">
+            <figcaption style="padding:20px 22px 22px;">
+              <div style="font-family:'Hanken Grotesk',sans-serif; font-weight:600; font-size:17px; color:#22201C; margin-bottom:6px;">The other foot</div>
+              <p style="font-size:14px; line-height:1.55; color:#5E5B54; margin:0 0 12px;">Same source, mirrored by a parameter &mdash; never a second file. Two files drift, and a mirror-flipped insert is the one defect you cannot wear.</p>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; line-height:1.7; color:#6E6A5F;">MIRROR 1 · same spec</div>
+            </figcaption>
+          </figure>
+
+        </div>
+
+        <p style="font-family:'JetBrains Mono',monospace; font-size:11px; line-height:1.7; color:#6E6A5F; letter-spacing:0.04em; margin:22px 0 0; max-width:82ch;">
+          Because the spec is kept, a replacement pair is the same pair &mdash; not a re-scan and a fresh guess.
+          Printed in TPU, one piece, with an integral groove that captures 3 mm spacer mesh.
+          Not a patient-specific orthosis and not a validated medical device &mdash; your clinician decides what your foot needs.
+        </p>
+      </div>
+    </div>
+
+
   <section id="inserts" style="border-top:1px solid rgba(34,32,28,0.09);">
     <div style="max-width:1180px; margin:0 auto; padding:88px 40px; display:grid; grid-template-columns:1fr 0.85fr; gap:52px; align-items:center;">
       <div>
