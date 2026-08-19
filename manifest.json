@@ -1,5 +1,5 @@
 {
-  "name": "OpenFootLab — Foot Passport",
+  "name": "OpenFootLab \u2014 Foot Passport",
   "short_name": "OpenFootLab",
   "description": "Own your foot record. Catch risk earlier. A private, portable foot-health record for every at-risk foot.",
   "start_url": "/",
@@ -7,6 +7,21 @@
   "background_color": "#08090A",
   "theme_color": "#08090A",
   "icons": [
-    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    {
+      "src": "/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
