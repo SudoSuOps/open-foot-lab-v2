@@ -21,4 +21,4 @@ publishes sourced research under Intel. Operated by Swarm and Bee LLC.
 ## Policy
 - Inserts are custom-fit accommodative devices, not medical devices; they are not intended to diagnose, treat, cure, or prevent any condition.
 - Intel figures are cited to peer-reviewed literature and are not medical advice.
-- Contact: build@openfootlab.com
+- Contact: care@openfootlab.com

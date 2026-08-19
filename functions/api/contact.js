@@ -1,17 +1,17 @@
 // Cloudflare Pages Function — POST /api/contact
 //
 // Sends TWO emails via Resend:
-//   1. the enquiry  -> build@openfootlab.com   (reply-to = the person who wrote in)
-//   2. a confirmation -> the person who wrote in (reply-to = build@openfootlab.com)
+//   1. the enquiry  -> care@openfootlab.com   (reply-to = the person who wrote in)
+//   2. a confirmation -> the person who wrote in (reply-to = care@openfootlab.com)
 //
 // Environment variables (Pages project → Settings → Environment variables):
 //   RESEND_API_KEY  required. Without it this endpoint returns an ERROR, not a fake
 //                   success — never tell someone their message landed when it did not.
-//   CONTACT_TO      default build@openfootlab.com  — where enquiries go
+//   CONTACT_TO      default care@openfootlab.com  — where enquiries go
 //   NOTIFY_FROM     default notifications@openfootlab.com — sender of the enquiry mail.
 //                   Deliberately NOT build@: sending from and to the same mailbox is
 //                   what makes a mailbox auto-responder loop and muddles threading.
-//   CONFIRM_FROM    default "OpenFootLab <build@openfootlab.com>" — sender of the
+//   CONFIRM_FROM    default "OpenFootLab <care@openfootlab.com>" — sender of the
 //                   confirmation, so a reply from the customer lands in build@.
 //   CONFIRM_OFF     set to "1" to suppress the customer confirmation.
 //
@@ -20,7 +20,7 @@
 // as a From. Do not move From to send.openfootlab.com — that subdomain is the
 // return-path, not a mailbox.
 
-const TEAM = 'build@openfootlab.com';
+const TEAM = 'care@openfootlab.com';
 
 export async function onRequestPost(context) {
   const { request, env } = context;

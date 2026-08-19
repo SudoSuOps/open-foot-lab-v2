@@ -44,9 +44,9 @@ Environment variables (Settings → Environment variables), then redeploy:
 | Variable | Required | Default |
 |---|---|---|
 | `RESEND_API_KEY` | **yes** | — verify the `openfootlab.com` domain in Resend first |
-| `CONTACT_TO` | no | `build@openfootlab.com` — where enquiries land |
+| `CONTACT_TO` | no | `care@openfootlab.com` — where enquiries land |
 | `NOTIFY_FROM` | no | `notifications@openfootlab.com` — the send-from |
-| `CONFIRM_FROM` | no | `OpenFootLab <build@openfootlab.com>` |
+| `CONFIRM_FROM` | no | `OpenFootLab <care@openfootlab.com>` |
 | `CONFIRM_OFF` | no | set to `1` to suppress the customer confirmation |
 
 `NOTIFY_FROM` is deliberately not `build@`. Sending from the same mailbox that
