@@ -4,7 +4,7 @@
 
 OpenFootlab is built around one durable asset: an owned, portable foot record (the Foot Passport).
 It also produces custom 3D-printed TPU offloading inserts with a soft, skin-safe top cover, and
-publishes sourced research under Intel. Operated by Swarm and Bee LLC.
+publishes sourced research under Intel. Operated by Caballerz Network LLC, d/b/a Swarm and Bee.
 
 ## Core pages
 - [Home / Foot Passport](https://www.openfootlab.com/): the foot-at-risk thesis and the owned foot record — photos over time, checks, footwear/offloading history, clinician-ready timelines.
