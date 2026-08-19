@@ -59,3 +59,39 @@
     });
   });
 })();
+
+  // Newsletter — double opt-in. Submitting sends a confirmation link; it does
+  // not subscribe. The status line tells the truth either way, including the
+  // failure, because a sign-up that silently drops an address is worse than
+  // one that admits it is down.
+  document.querySelectorAll('form[data-subscribe]').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var status = form.querySelector('[data-subscribe-status]');
+      var btn = form.querySelector('button[type=submit]');
+      var email = (form.querySelector('input[name=email]') || {}).value || '';
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())) {
+        if (status) status.textContent = 'That email address does not look right.';
+        return;
+      }
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      if (status) status.textContent = '';
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim(), company: (form.querySelector('input[name=company]')||{}).value || '' })
+      }).then(function(r){ return r.json().then(function(d){ return { ok: r.ok, d: d }; }); })
+        .then(function(res){
+          if (res.ok && res.d && res.d.ok) {
+            if (status) status.textContent = 'Check your inbox — we sent a confirmation link. You are not on the list until you click it.';
+            form.querySelector('input[name=email]').value = '';
+          } else {
+            if (status) status.textContent = (res.d && res.d.message) || 'That did not go through. Please try again, or email care@openfootlab.com.';
+          }
+        })
+        .catch(function(){
+          if (status) status.textContent = 'That did not go through. Please try again, or email care@openfootlab.com.';
+        })
+        .then(function(){ if (btn) { btn.disabled = false; btn.textContent = 'Sign up'; } });
+    });
+  });
